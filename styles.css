@@ -1,0 +1,15 @@
+@import url("color/auto.css");
+@import url("styles/nav.css");
+
+/* RESETS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body main {
+  margin-top: 5%;
+  margin-left: 15%;
+  margin-right: 15%;
+}

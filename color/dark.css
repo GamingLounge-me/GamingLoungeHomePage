@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+    color: white;
+    background: url(../assests/images/hintergrund02.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.block {
+    color: #fff;
+    background: #373737;
+}
+
+.hyperlink {
+    text-decoration: underlined;
+    color: white;
+}

@@ -11,5 +11,11 @@
 body main {
   margin-top: 5%;
   margin-left: 15%;
-  margin-right: 15%;
+  margin-right: 30%;
+}
+
+aside {
+  position: fixed;
+  right: 5%;
+  margin-top: 2.5%;
 }

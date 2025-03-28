@@ -20,3 +20,14 @@ body {
     text-decoration: underlined;
     color: white;
 }
+
+.full-block.minecraft {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url(../assests/images/MC.png);
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}

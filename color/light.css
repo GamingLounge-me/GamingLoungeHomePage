@@ -2,10 +2,6 @@ body {
     background-color: white;
     color: black;
     background: url(../assests/images/hintergrund01.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
 
 .block {

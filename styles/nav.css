@@ -4,21 +4,22 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 30px 10%;
+    padding: 20px 5%;
     background-color: #24252a;
 }
 
 header a.logo-name {
     font-family: "Montserrat", sans-serif;
-    font-weight: 500;
+    font-weight: 1000;
     color: #edf0f1;
     text-decoration: none;
-    margin-right: 2.5%;
-    width: 15%
+    margin-right: auto;
+    width: 15%;
+    font-size: 150%;
 }
 
 header a.logo {
-    margin-right: auto;
+    margin-right: 2.5%;
 }
 
 header nav ul.nav__links {

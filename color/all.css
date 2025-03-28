@@ -25,3 +25,23 @@ body {
     padding-right: 4%;
     padding-bottom: 3%;
 }
+
+.full-block {
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 100%;
+    padding-top: 2%;
+    padding-bottom: 3%;
+}
+
+.full-block.right { 
+    padding-left: 50%;
+    padding-right: 2.5%;
+}
+
+.full-block.left {
+    padding-left: 2.5%;
+    padding-right: 50%;
+}

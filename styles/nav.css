@@ -22,29 +22,29 @@ header a.logo {
     margin-right: 2.5%;
 }
 
-header nav ul.nav__links {
+header ul.nav__links {
     list-style: none;
     display: flex;
 }
 
-header nav ul.nav__links a,
+header ul.nav__links a,
 .cta,
 .overlay__content a {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     color: #edf0f1;
-    text-decoration: none;
+    text-decoration: none;;
 }
 
-.header nav ul.nav__links li {
+header .nav__links li {
     padding: 0px 10px;
 }
 
-header nav ul.nav__links li a {
+header ul.nav__links li a {
     transition: all 0.3s ease 0s;
 }
 
-header nav ul.nav__links li a:hover {
+header ul.nav__links li a:hover {
     color: #0088a9;
 }
 

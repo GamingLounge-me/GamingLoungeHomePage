@@ -133,7 +133,10 @@ header ul.nav__links li a:hover {
 
 @media only screen and (max-width: 1250px) {
 
-    .nav__links,
+    .nav__links {
+        display: none !important;
+    }
+
     .cta {
         display: none;
     }

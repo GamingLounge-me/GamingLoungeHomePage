@@ -119,3 +119,9 @@ div.gallery img {
   object-fit: cover;
   vertical-align: bottom;
 }
+
+@media (max-width: 1000px) { 
+  img {
+    display: none;
+  }
+}

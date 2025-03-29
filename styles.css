@@ -114,3 +114,8 @@ footer {
 footer {
   margin-bottom: 7.5%;
 }
+
+div.gallery img {
+  object-fit: cover;
+  vertical-align: bottom;
+}

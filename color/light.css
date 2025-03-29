@@ -42,3 +42,14 @@ a:has(href) {
     -moz-background-size: cover;
     -o-background-size: cover;
 }
+
+.full-block.telepad1 {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../assests/images/telepad.png);
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}

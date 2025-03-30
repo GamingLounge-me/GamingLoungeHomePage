@@ -125,3 +125,32 @@ div.gallery img {
     display: none;
   }
 }
+
+table {
+  border-width: 0;
+  border-style: solid;
+  border-top-color: #e0e0e0;
+  border-right-color: #e0e0e0;
+  border-bottom-color: #e0e0e0;
+  border-left-color: #e0e0e0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 130%;
+  border-collapse: collapse;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+table thead tr {
+  height: 50px;
+}
+
+table tbody tr:last-child {
+  border: 0;
+}
+
+table tbody tr:nth-child(even){
+  background: rgba(0, 0, 0, 0.15);
+}

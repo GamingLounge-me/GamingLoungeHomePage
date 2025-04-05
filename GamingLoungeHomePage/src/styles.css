@@ -1,5 +1,5 @@
-@import url("color/auto.css");
-@import url("styles/nav.css");
+@import url("assets/color/auto.css");
+@import url("assets/styles/nav.css");
 
 * {
   box-sizing: border-box;
@@ -44,6 +44,7 @@
 .full-block.right {
   padding-left: 50%;
   padding-right: 5%;
+
   @media screen and (max-width: 700px) {
     padding-left: 5%;
     padding-right: 5%;
@@ -53,10 +54,19 @@
 .full-block.left {
   padding-left: 5%;
   padding-right: 50%;
+
   @media screen and (max-width: 700px) {
     padding-left: 5%;
     padding-right: 5%;
   }
+}
+
+.full-block h1 {
+  height: 300px;
+}
+
+.full-block h1 a {
+  text-decoration: none;
 }
 
 button {
@@ -111,7 +121,7 @@ ul ul {
 
 .aboutus,
 footer {
-  text-align: center; 
+  text-align: center;
   margin-top: 2%;
 }
 
@@ -124,7 +134,7 @@ div.gallery img {
   vertical-align: bottom;
 }
 
-@media (max-width: 1000px) { 
+@media (max-width: 1000px) {
   img {
     display: none;
   }
@@ -155,6 +165,6 @@ table tbody tr:last-child {
   border: 0;
 }
 
-table tbody tr:nth-child(even){
+table tbody tr:nth-child(even) {
   background: rgba(0, 0, 0, 0.15);
 }

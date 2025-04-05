@@ -1,7 +1,7 @@
 body {
     background-color: white;
     color: black;
-    background: url(../assests/images/hintergrund01.png);
+    background: url(../images/hintergrund01.png);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,7 +12,8 @@ body {
     background-attachment: fixed;
 }
 
-.block, table {
+.block,
+table {
     color: #141618;
     background: #fff;
 }
@@ -27,7 +28,7 @@ table thead tr {
 }
 
 .full-block.minecraft {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(../assests/images/MC.png);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(../images/MC.png);
     color: white;
     background-position: center;
     background-repeat: no-repeat;
@@ -38,7 +39,7 @@ table thead tr {
 }
 
 .full-block.coding {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../assests/images/coding.jpg);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/coding.jpg);
     color: white;
     background-position: center;
     background-repeat: no-repeat;
@@ -49,7 +50,7 @@ table thead tr {
 }
 
 .full-block.telepad1 {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../assests/images/telepad.png);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/telepad.png);
     color: white;
     background-position: center;
     background-repeat: no-repeat;
@@ -60,7 +61,7 @@ table thead tr {
 }
 
 .full-block.minecraft-hypixel-zombies-dead_end {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../assests/images/hypixel-zombies-dead_end.png);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/hypixel-zombies-dead_end.png);
     color: white;
     background-position: center;
     background-repeat: no-repeat;
@@ -71,7 +72,7 @@ table thead tr {
 }
 
 .full-block.minecraft-hypixel-zombies-bad_blood {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../assests/images/hypixel-zombies-bad_blood.png);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/hypixel-zombies-bad_blood.png);
     color: white;
     background-position: center;
     background-repeat: no-repeat;
@@ -83,7 +84,7 @@ table thead tr {
 
 
 .full-block.minecraft-hypixel-zombies-alien_arcadium {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../assests/images/hypixel-zombies-alien_arcadium.png);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/hypixel-zombies-alien_arcadium.png);
     color: white;
     background-position: center;
     background-repeat: no-repeat;
@@ -94,7 +95,7 @@ table thead tr {
 }
 
 .full-block.minecraft-hypixel-zombies-prison {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../assests/images/hypixel-zombies-prison.png);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/hypixel-zombies-prison.png);
     color: white;
     background-position: center;
     background-repeat: no-repeat;

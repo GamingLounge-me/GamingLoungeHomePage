@@ -1,3 +1,0 @@
-@import url("all.css");
-@import url("light.css") not (prefers-color-scheme: dark);
-@import url("dark.css") (prefers-color-scheme: dark);

@@ -23,7 +23,7 @@ const Rules = () => {
                         <ul>
                             {Object.entries(rules).map(([ruleNumber, ruleText]) => (
                                 <li key={ruleNumber}>
-                                    {ruleNumber}. {typeof ruleText === 'string' ? ruleText : Object.entries(ruleText).map(([subRuleNumber, subRuleText]) => (
+                                    {ruleNumber}. {typeof ruleText === 'string' ? ruleText : Object.entries(ruleText).map(([subRuleText]) => (
                                         <ul style={{ listStyle: "circle" }}>
                                             <li>{subRuleText}</li>
                                         </ul>

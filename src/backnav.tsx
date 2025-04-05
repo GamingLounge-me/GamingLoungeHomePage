@@ -1,24 +1,7 @@
 import { Link, Outlet } from 'react-router-dom'
 import logo from './assets/icon/gaminglounge-64x64.png'
 
-const doc = document;
-const menuOpen = doc.querySelector(".menu");
-const menuClose = doc.querySelector(".close");
-const overlay = doc.querySelector(".overlay");
-
-function open() {
-  menuOpen?.addEventListener("click", () => {
-    overlay?.classList.add("overlay--active");
-  });
-}
-
-function close() {
-  menuClose?.addEventListener("click", () => {
-    overlay?.classList.remove("overlay--active");
-  });
-}
-
-function Nav(props) {
+function Nav(props: any) {
   return (
     <>
       <header>

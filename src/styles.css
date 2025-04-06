@@ -61,11 +61,11 @@
   }
 }
 
-.full-block h1 {
+.full-block.empty h1 {
   height: 300px;
 }
 
-.full-block h1 a {
+.full-block.empty h1 a {
   text-decoration: none;
 }
 

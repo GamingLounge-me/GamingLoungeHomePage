@@ -116,8 +116,22 @@ ul {
 
 ul ul {
   list-style: circle;
+  list-style-position: inside;
+  padding-left: 20px;
+}
+
+td {
+  padding: 10px;
+}
+
+td.inside {
+  padding-left: 20px;
+}
+
+td.inside2 {
   padding-left: 40px;
 }
+
 
 .aboutus,
 footer {

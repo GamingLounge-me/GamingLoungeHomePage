@@ -9,8 +9,8 @@ const NoPage = () => {
                     <p>Only open Lucky Chests during Shoping Spree</p><br />
                     <p>Shping Spree spawn every 10 rounds.</p>
                     <br /><h3>Eco-Rounds</h3>
-                    <p>Everyone sneek in an corner (lucky chest or upgrade machine for example) and wait for slimes to grow,<br /> while waiting block with the sword.</p>
-                    <p>This could be also usefull at some other rounds with many zombies.</p>
+                    <p>Everyone sneek in an corner (lucky chest or upgrade machine for example) and wait for slimes to grow,<br /> while waiting block witd tde sword.</p>
+                    <p>tdis could be also usefull at some otder rounds witd many zombies.</p>
                     <br /><h3>Reviving</h3>
                     <p>After being revived you need to press shift again, if you dont you wont revive anyone.</p>
                     <br /><h3>Boosts</h3>
@@ -25,7 +25,7 @@ const NoPage = () => {
                         <li>Pistol</li>
                         <li>Shotgun</li>
                         <li>
-                            One of the following:
+                            One of tde following:
                             <ul>
                                 <li>Double Barrel Shotgun</li>
                                 <li>Rainbow Rifel</li>
@@ -49,875 +49,875 @@ const NoPage = () => {
                     <ul>
                         <li>Fast revive</li>
                         <li>Quickfire</li>
-                        <li>Extra health</li>
+                        <li>Extra healtd</li>
                     </ul>
                 </div>
 
                 <div className="block">
                     <h1>Explanations for table</h1>
                     <ul>
-                        <li>Zombies: Slimes -&gt;  Wait 35 secounds in an corner with all players crouching and blocking with sword so the slimes grow and have more hp to get more money.</li>
-                        <li>Perks: Frozen bullets -&gt;  1 Person with Rainbow rifle, replace quickfore with frozen bullets, shoot spread out to freeze zombies.
-                            <br />-&gt; After the round Frozen bullets can be replaced again.</li>
+                        <li>Zombies: Slimes -&gt;  Wait 35 secounds in an corner witd all players crouching and blocking witd sword so tde slimes grow and have more hp to get more money.</li>
+                        <li>Perks: Frozen bullets -&gt;  1 Person witd Rainbow rifle, replace quickfore witd frozen bullets, shoot spread out to freeze zombies.
+                            <br />-&gt; After tde round Frozen bullets can be replaced again.</li>
                     </ul>
                 </div>
 
                 <table>
                     <thead>
                         <tr>
-                            <th>Round</th>
-                            <th>Zombies</th>
-                            <th>Boss</th>
-                            <th>Perks</th>
-                            <th>corner</th>
-                            <th>Other</th>
+                            <td>Round</td>
+                            <td>Zombies</td>
+                            <td>Boss</td>
+                            <td>Perks</td>
+                            <td>corner</td>
+                            <td>Otder</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th>1</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <td>1</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>2</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <td>2</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>3</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <td>3</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>4</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <td>4</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>5</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <td>5</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>6</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <td>6</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>7</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <td>7</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>8</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <td>8</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>9</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <td>9</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>10</th>
-                            <th></th>
-                            <th>UFO is opening,<br />zombies from above.</th>
-                            <th></th>
-                            <th></th>
-                            <th>You can start,<br /> open doors</th>
+                            <td>10</td>
+                            <td></td>
+                            <td>UFO is opening,<br />zombies from above.</td>
+                            <td></td>
+                            <td></td>
+                            <td>You can start,<br /> open doors</td>
                         </tr>
                         <tr>
-                            <th>11</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <td>11</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>12</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <td>12</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>13</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <td>13</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>14</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <td>14</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>15</th>
-                            <th></th>
-                            <th>Gold Armor Giant</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <td>15</td>
+                            <td></td>
+                            <td>Gold Armor Giant</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>16</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <td>16</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>17</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <td>17</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>18</th>
-                            <th>Slimes</th>
-                            <th></th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                            <td>18</td>
+                            <td>Slimes</td>
+                            <td></td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>19</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <td>19</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>20</th>
-                            <th></th>
-                            <th>Iron Armor Giant</th>
-                            <th>
+                            <td>20</td>
+                            <td></td>
+                            <td>Iron Armor Giant</td>
+                            <td>
                                 <p>Fast revive</p>
                                 <p>Quickfire</p>
-                                <p>Extra Health 3</p>
-                            </th>
-                            <th></th>
-                            <th></th>
+                                <p>Extra Healtd 3</p>
+                            </td>
+                            <td></td>
+                            <td></td>
                         </tr>
-                        <tr>
-                            <th>21</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                        <tr>
+                            <td>21</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
-                        <tr>
-                            <th>22</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                        <tr>
+                            <td>22</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
-                        <tr>
-                            <th>23</th>
-                            <th>Slimes</th>
-                            <th></th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                        <tr>
+                            <td>23</td>
+                            <td>Slimes</td>
+                            <td></td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
-                        <tr>
-                            <th>24</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                        <tr>
+                            <td>24</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
-                        <tr>
-                            <th>25</th>
-                            <th></th>
-                            <th>Mega Blob</th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                        <tr>
+                            <td>25</td>
+                            <td></td>
+                            <td>Mega Blob</td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
-                        <tr>
-                            <th>26</th>
-                            <th>Slimes</th>
-                            <th></th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                        <tr>
+                            <td>26</td>
+                            <td>Slimes</td>
+                            <td></td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
-                        <tr>
-                            <th>27</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                        <tr>
+                            <td>27</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
-                        <tr>
-                            <th>28</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                        <tr>
+                            <td>28</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
-                        <tr>
-                            <th>29</th>
-                            <th>Slimes</th>
-                            <th></th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                        <tr>
+                            <td>29</td>
+                            <td>Slimes</td>
+                            <td></td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
-                        <tr>
-                            <th>30</th>
-                            <th></th>
-                            <th>Diamond Armor Giant</th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                        <tr>
+                            <td>30</td>
+                            <td></td>
+                            <td>Diamond Armor Giant</td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
-                        <tr>
-                            <th>31</th>
-                            <th>Slimes</th>
-                            <th></th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                        <tr>
+                            <td>31</td>
+                            <td>Slimes</td>
+                            <td></td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
-                        <tr>
-                            <th>32</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                        <tr>
+                            <td>32</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>33</th>
-                            <th>Slimes</th>
-                            <th></th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                            <td>33</td>
+                            <td>Slimes</td>
+                            <td></td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>34</th>
-                            <th>Slimes</th>
-                            <th></th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                            <td>34</td>
+                            <td>Slimes</td>
+                            <td></td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>35</th>
-                            <th></th>
-                            <th>Mega Magma</th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                            <td>35</td>
+                            <td></td>
+                            <td>Mega Magma</td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>36</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                            <td>36</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>37</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                            <td>37</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>38</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                            <td>38</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>39</th>
-                            <th>Slimes</th>
-                            <th></th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                            <td>39</td>
+                            <td>Slimes</td>
+                            <td></td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>40</th>
-                            <th></th>
-                            <th>The Old One</th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                            <td>40</td>
+                            <td></td>
+                            <td>tde Old One</td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>41</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                            <td>41</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>42</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                            <td>42</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>43</th>
-                            <th>Slimes</th>
-                            <th></th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                            <td>43</td>
+                            <td>Slimes</td>
+                            <td></td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>44</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                            <td>44</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>45</th>
-                            <th></th>
-                            <th>2</th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                            <td>45</td>
+                            <td></td>
+                            <td>2</td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>46</th>
-                            <th></th>
-                            <th>1</th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                            <td>46</td>
+                            <td></td>
+                            <td>1</td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>47</th>
-                            <th>Slimes</th>
-                            <th></th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                            <td>47</td>
+                            <td>Slimes</td>
+                            <td></td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>48</th>
-                            <th></th>
-                            <th>1</th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                            <td>48</td>
+                            <td></td>
+                            <td>1</td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>49</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                            <td>49</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>50</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>50</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>51</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>51</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>52</th>
-                            <th>Slimes</th>
-                            <th></th>
-                            <th></th>
-                            <th>lucky chest</th>
-                            <th></th>
+                            <td>52</td>
+                            <td>Slimes</td>
+                            <td></td>
+                            <td></td>
+                            <td>lucky chest</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>53</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ferris wheel,<br />back corner</th>
-                            <th></th>
+                            <td>53</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ferris wheel,<br />back corner</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>54</th>
-                            <th></th>
-                            <th>Rainbow Giant + 2</th>
-                            <th></th>
-                            <th>Ferris wheel,<br />back corner</th>
-                            <th></th>
+                            <td>54</td>
+                            <td></td>
+                            <td>Rainbow Giant + 2</td>
+                            <td></td>
+                            <td>Ferris wheel,<br />back corner</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>55</th>
-                            <th></th>
-                            <th>Frozen bullets</th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th>2/4 player need,<br />Diamond Chestplate</th>
+                            <td>55</td>
+                            <td></td>
+                            <td>Frozen bullets</td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td>2/4 player need,<br />Diamond Chestplate</td>
                         </tr>
                         <tr>
-                            <th>56</th>
-                            <th></th>
-                            <th>Mega Blob</th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>56</td>
+                            <td></td>
+                            <td>Mega Blob</td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>57</th>
-                            <th></th>
-                            <th>Mega Magma</th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>57</td>
+                            <td></td>
+                            <td>Mega Magma</td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>58</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ferris wheel,<br />back corner</th>
-                            <th></th>
+                            <td>58</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ferris wheel,<br />back corner</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>59</th>
-                            <th></th>
-                            <th>13</th>
-                            <th></th>
-                            <th>Ferris wheel,<br />back corner</th>
-                            <th></th>
+                            <td>59</td>
+                            <td></td>
+                            <td>13</td>
+                            <td></td>
+                            <td>Ferris wheel,<br />back corner</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>60</th>
-                            <th>80 Baby Space Shooters</th>
-                            <th>10</th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>60</td>
+                            <td>80 Baby Space Shooters</td>
+                            <td>10</td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>61</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>61</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>62</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>62</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>63</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>63</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>64</th>
-                            <th></th>
-                            <th>Frozen bullets</th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>64</td>
+                            <td></td>
+                            <td>Frozen bullets</td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>65</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>65</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>66</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>66</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>67</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>67</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>68</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>68</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>69</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>69</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>70</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>70</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>71</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>71</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>72</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>72</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>73</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>73</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>74</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>74</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>75</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>75</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>76</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>76</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>77</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>77</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>78</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>78</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>79</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>79</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>80</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>80</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>81</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>81</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>82</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>82</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>83</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>83</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>84</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>84</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>85</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>85</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>86</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>86</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>87</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>87</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>88</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>88</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>89</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>89</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>90</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>90</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>91</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>91</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>92</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>92</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>93</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>93</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>94</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>94</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>95</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>95</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>96</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>96</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>97</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>97</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>98</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>98</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>99</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>99</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>100</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>100</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>101</th>
-                            <th></th>
-                            <th>World Ender</th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>101</td>
+                            <td></td>
+                            <td>World Ender</td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>102</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>102</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>103</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>103</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>104</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>104</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th>105</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Ultimate maschine</th>
-                            <th></th>
+                            <td>105</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Ultimate maschine</td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>

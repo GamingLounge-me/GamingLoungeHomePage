@@ -70,6 +70,14 @@ const commands_data = [
     {
         title: "fdisk",
         description: "Partition a disk",
+    },
+    {
+        title: "ip",
+        description: "Show/manipulate network interfaces",
+    },
+    {
+        title: "ip a",
+        description: "Display all IP addresses assigned to network interfaces",
     }
 ]
 

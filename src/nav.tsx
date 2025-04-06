@@ -22,8 +22,8 @@ function Nav() {
   return (
     <>
       <header>
-        <a className="logo"><img src={logo} alt="logo" /></a>
-        <a className="logo-name">
+        <Link to={"/"} className="logo"><img src={logo} alt="logo" /></Link>
+        <Link to={"/"} className="logo-name">
           <span style={{ color: "#ff0000" }}>G</span>
           <span style={{ color: "#ff1100" }}>a</span>
           <span style={{ color: "#ff2200" }}>m</span>
@@ -36,7 +36,7 @@ function Nav() {
           <span style={{ color: "#ff9900" }}>n</span>
           <span style={{ color: "#ffaa00" }}>g</span>
           <span style={{ color: "#ffbb00" }}>e</span>
-        </a>
+        </Link>
 
         <ul className="nav__links">
           <Link to="/">Home</Link>

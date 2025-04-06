@@ -16,7 +16,6 @@ const Zombies = () => {
                 <button><Link to="/minecraft/hypixel/arcade/zombies/alien_arcadium/">more information</Link></button>
             </div >
 
-
             <div className="full-block right empty minecraft-hypixel-zombies-prison">
                 <h1><a id="prison" href="#prison">Prison</a></h1>
             </div>

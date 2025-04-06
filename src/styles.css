@@ -169,6 +169,7 @@ table {
   width: 100%;
   overflow: hidden;
   border-radius: 10px;
+  margin-bottom: 5%;
 }
 
 table thead tr {

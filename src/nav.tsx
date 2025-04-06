@@ -1,24 +1,26 @@
 import { Link, Outlet } from 'react-router-dom'
 import logo from './assets/icon/gaminglounge-64x64.png'
+import { FunctionComponent, useState } from 'react';
 
-const doc = document;
-const menuOpen = doc.querySelector(".menu");
-const menuClose = doc.querySelector(".close");
-const overlay = doc.querySelector(".overlay");
-
-function open() {
-    menuOpen?.addEventListener("click", () => {
-        overlay?.classList.add("overlay--active");
-    });
+export type NavData = {
+    mobile: {
+        display: string,
+        open_nav: boolean,
+        link: string,
+    },
+    links: {
+        display: string,
+        link: string,
+        highlight?: boolean,
+    }[],
 }
 
-function close() {
-    menuClose?.addEventListener("click", () => {
-        overlay?.classList.remove("overlay--active");
-    });
-}
+type NavProps = {
+    data: NavData,
+};
 
-function Nav(props: { data: { mobile: { display: string, open_nav: boolean, link: string }, links: { [key: string]: string } } }) {
+const Nav: FunctionComponent<NavProps> = ({data}) => {
+    const [ mobileNavOpen, setMobileNavOpen ] = useState<boolean>(false);
     return (
         <>
             <header>
@@ -40,27 +42,22 @@ function Nav(props: { data: { mobile: { display: string, open_nav: boolean, link
 
                 <ul className="nav__links">
                     {
-                        Object.entries(props.data.links).slice(1).map(([name, link]) => (
-                            <Link to={link}>{name}</Link>
-                        ))
+                        data.links.map(({display, link, highlight}) => (
+                            <Link to={link} className={highlight ? "cta" : ""}>{display}</Link>)
+                        )
                     }
                 </ul>
 
-                {
-                    Object.entries(props.data.links).slice(0, 1).map(([name, link]) => (
-                        <Link to={link} className="cta">{name}</Link>
-                    ))
-                }
-                <p className="menu cta" onClick={() => open()}>Navigation</p>
+                <p className="menu cta" onClick={() => setMobileNavOpen(true)}>Navigation</p>
             </header>
 
-            <div id="mobile__menu" className="overlay">
-                <a className="close" onClick={() => close()}>&times;</a>
+            <div id="mobile__menu" className={mobileNavOpen ? "overlay overlay--active" : "overlay"}>
+                <a className="close" onClick={() => setMobileNavOpen(false)}>&times;</a>
                 <div className="overlay__content">
                     {
-                        Object.entries(props.data.links).map(([name, link]) => (
-                            <Link to={link}>{name}</Link>
-                        ))
+                        data.links.map(({display, link}) => (
+                            <Link to={link}>{display}</Link>)
+                        )
                     }
                 </div>
             </div>

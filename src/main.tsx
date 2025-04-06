@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import NoPage from './pages/NoPage.tsx'
 import Nav, { NavData } from './nav.tsx'
 import Home from './pages/home.tsx'
-import Rules from './pages/Rules.tsx'
+import RulesPage from './pages/Rules.tsx'
 import Endless from './pages/minecraft/endless.tsx'
 import Zombies from './pages/minecraft/hypixel/arcade/zombies.tsx'
 import Alien_Arcadium from './pages/minecraft/hypixel/arcade/zombies/alien_arcadium.tsx'
@@ -20,7 +20,7 @@ const main: NavData = {
         { display: "Home", link: "/" },
         { display: "Rules", link: "/rules", highlight: true },
     ],
-}
+};
 
 const minecraft_hypixel_arcade_zombies: NavData = {
     mobile: {
@@ -31,7 +31,7 @@ const minecraft_hypixel_arcade_zombies: NavData = {
     links: [
         { display: "Back", link: "/minecraft/hypixel/arcade/zombies/", highlight: true }
     ],
-}
+};
 
 const router = createBrowserRouter([
     {
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
                 path: "/", element: <Home />
             },
             {
-                path: "/rules/", element: <Rules />
+                path: "/rules/", element: <RulesPage />
             },
             {
                 path: "/minecraft/endless/", element: <Endless />
@@ -70,9 +70,9 @@ const router = createBrowserRouter([
             }
         ]
     }
-])
+]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <RouterProvider router={router} />
-)
+);
 

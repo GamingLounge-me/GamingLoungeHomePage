@@ -1,11 +1,17 @@
-const NoPage = () => {
+import { FunctionComponent } from "react";
+
+const NoPage: FunctionComponent = () => {
     return (
-        <>
-            <div style={{ width: "100%", marginTop: "7.5%", marginBottom: "7.5%" }}>
-                <h1 style={{ justifySelf: "center" }}>No page found</h1>
+        <div className="py-20 w-full justify-center flex">
+            <div className="card bg-base-100 shadow-sm">
+                <div className="card-body">
+                    <h2 className="card-title">Page not found</h2>
+                    <p>The requested page could not be found</p>
+                </div>
             </div>
-        </>
-    )
+        </div>
+    );
 };
 
-export default NoPage
+export default NoPage;
+

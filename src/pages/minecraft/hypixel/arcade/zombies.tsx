@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Zombies = () => {
     return (
         <>
@@ -11,7 +13,7 @@ const Zombies = () => {
 
             <div className="full-block right minecraft-hypixel-zombies-alien_arcadium">
                 <h1><a id="alien_arcadium" href="#alien_arcadium">Alien Arcadium</a></h1>
-                <button><a href="./zombies/alien_arcadium/">more information</a></button>
+                <button><Link to="/minecraft/hypixel/arcade/zombies/alien_arcadium/">more information</Link></button>
             </div >
 
 

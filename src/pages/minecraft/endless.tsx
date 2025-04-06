@@ -5,7 +5,7 @@ const Endless = () => {
     return (
         <>
             <div className="full-block right telepad1">
-                <h1><a href="#telepad" className="telepad">Telepad</a></h1>
+                <h1><a href="#telepad" id="telepad">Telepad</a></h1>
                 <p>With the telepad you can teleport to different other telepads aacross the worlds of the server.</p>
                 <p>The Telepad is an multi block structure of 3x3 with an beacon in the middel.</p><br />
                 <h3>Cosmetic</h3>

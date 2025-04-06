@@ -22,7 +22,7 @@ const router = createBrowserRouter([
         path: "/rules/", element: <Rules />
       },
       {
-        path: "/endless/", element: <Endless />
+        path: "/minecraft/endless/", element: <Endless />
       },
       {
         path: "/minecraft/hypixel/arcade/zombies/", element: <Zombies />

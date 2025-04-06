@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Home = () => {
     return (
         <>
@@ -30,7 +32,7 @@ const Home = () => {
                     </li>
                     <li><a href="https://github.com/GamingLounge-me/telepads" target="_blank">Telepad</a></li>
                 </ul>
-                <button><a href="endless/">more information</a></button>
+                <button><Link to="/minecraft/endless/">more information</Link></button>
                 <button><a href="https://map.gaminglounge.me/minecraft/endless/" target="_blank">Map</a></button>
             </div >
 

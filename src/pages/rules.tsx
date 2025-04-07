@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
+import { Block, BlockHolder } from "../components/block";
 
 type Rule = {
     id: string,
@@ -106,25 +107,22 @@ const RuleSetRenderer: FunctionComponent<RuleSetRenderProps> = ({rules, data}) =
 
 const RulesPage: FunctionComponent = () => {
     return (
-        <div className="py-20 justify-center flex">
-            <div className="card bg-base-100 shadow-sm md:w-128 w-full">
-                <div className="card-body">
-                    <h1 className="card-title text-5xl">Rules</h1>
-                    {Object.entries(rules).map(([category, rules], idx) => (
-                        <div id={category} key={idx}>
-                            <div className="text-3xl">
-                                {rules.text}
-                                <HiddenLink href={"#" + category} />
-                            </div>
-                            <RuleSetRenderer rules={rules.rules} data={{
-                                level: 0,
-                                path: category,
-                            }} />
+        <BlockHolder>
+            <Block title="Rules">
+                {Object.entries(rules).map(([category, rules], idx) => (
+                    <div id={category} key={idx}>
+                        <div className="text-3xl">
+                            {rules.text}
+                            <HiddenLink href={"#" + category} />
                         </div>
-                    ))}
-                </div>
-            </div>
-        </div>
+                        <RuleSetRenderer rules={rules.rules} data={{
+                            level: 0,
+                            path: category,
+                        }} />
+                    </div>
+                ))}
+            </Block>
+        </BlockHolder>
     );
 };
 

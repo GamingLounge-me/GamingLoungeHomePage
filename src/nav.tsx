@@ -3,10 +3,10 @@ import logo from './assets/icon/gaminglounge-64x64.png'
 import { CSSProperties, FunctionComponent } from 'react';
 import ImgBgLight from './assets/images/hintergrund01.png?url';
 import ImgBgDark from './assets/images/hintergrund02.png?url';
-import ImgIconYT from './assets/icon/youtube.svg?url';
-import ImgIconTT from './assets/icon/tiktok.svg?url'
-import ImgIconDC from './assets/icon/discord.svg?url'
-import ImgIconGH from './assets/icon/github.svg?url'
+import ImgIconYT from './assets/icon/youtube.svg?react';
+import ImgIconTT from './assets/icon/tiktok.svg?react'
+import ImgIconDC from './assets/icon/discord.svg?react'
+import ImgIconGH from './assets/icon/github.svg?react'
 
 export type NavData = {
     mobile: {
@@ -84,10 +84,10 @@ const Nav: FunctionComponent<NavProps> = ({data}) => {
                     <nav>
                         <h6 className="footer-title text-xl normal-case">Social</h6>
                         <div className="grid grid-flow-col gap-4">
-                            <a href="https://youtube.gaminglounge.me/" target="_blank"><img className="w-8 h-8" src={ImgIconYT} alt="youtube icon" /></a>
-                            <a href="https://tiktok.gaminglounge.me/" target="_blank"><img className="w-8 h-8" src={ImgIconTT} alt="tiktok icon" /></a>
-                            <a href="https://discord.gaminglounge.me/" target="_blank"><img className="w-8 h-8" src={ImgIconDC} alt="discord icon" /></a>
-                            <a href="https://github.gaminglounge.me/" target="_blank"><img className="w-8 h-8" src={ImgIconGH} alt="github icon" /></a>
+                            <a href="https://youtube.gaminglounge.me/" target="_blank"><ImgIconYT className="w-8 h-8 fill-[red]" /></a>
+                            <a href="https://tiktok.gaminglounge.me/" target="_blank"><ImgIconTT className="w-8 h-8 fill-[black]" /></a>
+                            <a href="https://discord.gaminglounge.me/" target="_blank"><ImgIconDC className="w-8 h-8 fill-[#5865F2]" /></a>
+                            <a href="https://github.gaminglounge.me/" target="_blank"><ImgIconGH className="w-8 h-8 fill-[#24292f]" /></a>
                         </div>
                     </nav>
                 </footer>

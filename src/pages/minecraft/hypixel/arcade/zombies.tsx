@@ -1,10 +1,10 @@
 import { FunctionComponent } from 'react';
-import { Link } from 'react-router-dom'
 import { Block, BlockHolder } from '../../../../components/block';
 import ImgDeadEnd from '../../../../assets/images/hypixel-zombies-dead_end.png?url';
 import ImgBadBlood from '../../../../assets/images/hypixel-zombies-bad_blood.png?url';
 import ImgAlienArcadium from '../../../../assets/images/hypixel-zombies-alien_arcadium.png?url';
 import ImgPrison from '../../../../assets/images/hypixel-zombies-prison.png?url';
+import Link from '../../../../components/link';
 
 const Zombies: FunctionComponent = () => {
     return (

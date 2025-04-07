@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
-import { Link } from "react-router-dom";
 import { Block, BlockHolder } from "../components/block";
+import Link from "../components/link";
 
 type Rule = {
     id: string,
@@ -51,7 +51,7 @@ type HiddenLinkProps = {
 
 const HiddenLink: FunctionComponent<HiddenLinkProps> = ({href}) => {
     return (
-        <Link to={href} className="text-[rgb(0,0,0,0)] link link-hover link-primary">#</Link>
+        <Link to={{id: href}} className="text-[rgb(0,0,0,0)] link link-hover link-primary">#</Link>
     );
 };
 
@@ -74,7 +74,7 @@ const RuleRenderer: FunctionComponent<RuleRenderProps> = ({rule, data}) => {
     return (
         <li id={data.path}>
             {rule.text}
-            <HiddenLink href={"#" + data.path} />
+            <HiddenLink href={data.path} />
             {rule.childs && <RuleSetRenderer rules={rule.childs} data={data} />}
         </li>
     );
@@ -113,7 +113,7 @@ const RulesPage: FunctionComponent = () => {
                     <div id={category} key={idx}>
                         <div className="text-3xl">
                             {rules.text}
-                            <HiddenLink href={"#" + category} />
+                            <HiddenLink href={category} />
                         </div>
                         <RuleSetRenderer rules={rules.rules} data={{
                             level: 0,

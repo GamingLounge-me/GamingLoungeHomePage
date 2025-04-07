@@ -1,4 +1,4 @@
-import { Link, Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import logo from './assets/icon/gaminglounge-64x64.png'
 import { CSSProperties, FunctionComponent } from 'react';
 import ImgBgLight from './assets/images/hintergrund01.png?url';
@@ -7,6 +7,7 @@ import ImgIconYT from './assets/icon/youtube.svg?react';
 import ImgIconTT from './assets/icon/tiktok.svg?react'
 import ImgIconDC from './assets/icon/discord.svg?react'
 import ImgIconGH from './assets/icon/github.svg?react'
+import Link from './components/link';
 
 export type NavData = {
     mobile: {
@@ -43,8 +44,8 @@ const Nav: FunctionComponent<NavProps> = ({data}) => {
                 } as CSSProperties}>
                 <header className="navbar bg-base-200 sticky top-0 z-40">
                     <div className="navbar-start text-xl normal-case">
-                        <Link to={"/"}><img src={logo} alt="logo" className="w-full h-full" /></Link>
-                        <Link to={"/"}>
+                        <Link to="/"><img src={logo} alt="logo" className="w-full h-full" /></Link>
+                        <Link to="/">
                             <span style={{ color: "#ff0000" }}>G</span>
                             <span style={{ color: "#ff1100" }}>a</span>
                             <span style={{ color: "#ff2200" }}>m</span>
@@ -78,16 +79,16 @@ const Nav: FunctionComponent<NavProps> = ({data}) => {
                     <aside>
                         <h6 className="footer-title text-xl normal-case">Contact</h6>
                         <p>
-                            <a href="mailto:info@gaminglounge.me">E-Mail: <span className="link">info@gaminglounge.me</span></a>
+                            <Link to={{mail: "info@gaminglounge.me"}}>E-Mail: <span className="link">info@gaminglounge.me</span></Link>
                         </p>
                     </aside>
                     <nav>
                         <h6 className="footer-title text-xl normal-case">Social</h6>
                         <div className="grid grid-flow-col gap-4">
-                            <a href="https://youtube.gaminglounge.me/" target="_blank"><ImgIconYT className="w-8 h-8 fill-neutral-content" /></a>
-                            <a href="https://tiktok.gaminglounge.me/" target="_blank"><ImgIconTT className="w-8 h-8 fill-neutral-content" /></a>
-                            <a href="https://discord.gaminglounge.me/" target="_blank"><ImgIconDC className="w-8 h-8 fill-neutral-content" /></a>
-                            <a href="https://github.gaminglounge.me/" target="_blank"><ImgIconGH className="w-8 h-8 fill-neutral-content" /></a>
+                            <Link to="https://youtube.gaminglounge.me/" newTab><ImgIconYT className="w-8 h-8 fill-neutral-content" /></Link>
+                            <Link to="https://tiktok.gaminglounge.me/" newTab><ImgIconTT className="w-8 h-8 fill-neutral-content" /></Link>
+                            <Link to="https://discord.gaminglounge.me/" newTab><ImgIconDC className="w-8 h-8 fill-neutral-content" /></Link>
+                            <Link to="https://github.gaminglounge.me/" newTab><ImgIconGH className="w-8 h-8 fill-neutral-content" /></Link>
                         </div>
                     </nav>
                 </footer>

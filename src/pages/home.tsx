@@ -1,8 +1,8 @@
 import { FunctionComponent } from 'react';
-import { Link } from 'react-router-dom'
 import ImgMc from './../assets/images/MC.png?url';
 import ImgCoding from './../assets/images/coding.jpg?url';
 import { Block, BlockHolder } from '../components/block';
+import Link from '../components/link';
 
 const Home: FunctionComponent = () => {
     return (
@@ -43,18 +43,18 @@ const Home: FunctionComponent = () => {
                 <div>
                     <h4 className="text-lg">Usefull items (Found in Recepie book)</h4>
                     <ul className="list-disc pl-4">
-                        <li><a href="https://github.com/GamingLounge-me/PortableInventories" target="_blank" className="link">PortableInventories</a>
+                        <li><Link to={{ghRepo: "GamingLounge-me/PortableInventories"}} newTab className="link">PortableInventories</Link>
                             <ul className="list-[circle] pl-4">
                                 <li>Portable- Workbench / Enderchest / Grindstone / Stonecutter / Smithingtable</li>
                                 <li>The item is not renamed, just the vanilla item but enchanted</li>
                             </ul>
                         </li>
-                        <li><a href="https://github.com/GamingLounge-me/telepads" target="_blank" className="link">Telepad</a></li>
+                        <li><Link to={{ghRepo: "GamingLounge-me/telepads"}} newTab className="link">Telepad</Link></li>
                     </ul>
                 </div>
                 <div className="card-actions justify-end">
                     <Link to="/minecraft/endless/" className="btn">More information</Link>
-                    <a href="https://map.gaminglounge.me/minecraft/endless/" target="_blank" className="btn">Map</a>
+                    <Link to={{map: "minecraft/endless"}} newTab className="btn">Map</Link>
                 </div>
             </Block>
 
@@ -69,10 +69,10 @@ const Home: FunctionComponent = () => {
                 <div>
                     <h4 className="text-lg">API</h4>
                     <ul className="list-disc pl-4">
-                        <li><a href="https://github.com/GamingLounge-me/ConfigAPI" target="_blank" className="link">ConfigAPI</a></li>
-                        <li><a href="https://github.com/GamingLounge-me/GuiAPI" target="_blank" className="link">GuiAPI</a></li>
-                        <li><a href="https://github.com/GamingLounge-me/PlayerInputAPI" target="_blank" className="link">PlayerInputAPI</a></li>
-                        <li><a href="https://github.com/GamingLounge-me/ItemBuilder" target="_blank" className="link">ItemBuilder</a></li>
+                        <li><Link to={{ghRepo: "GamingLounge-me/ConfigAPI"}} newTab className="link">ConfigAPI</Link></li>
+                        <li><Link to={{ghRepo: "GamingLounge-me/GuiAPI"}} newTab className="link">GuiAPI</Link></li>
+                        <li><Link to={{ghRepo: "GamingLounge-me/PlayerInputAPI"}} newTab className="link">PlayerInputAPI</Link></li>
+                        <li><Link to={{ghRepo: "GamingLounge-me/ItemBuilder"}} newTab className="link">ItemBuilder</Link></li>
                     </ul>
                 </div>
                 <div>
@@ -83,7 +83,7 @@ const Home: FunctionComponent = () => {
                 <div>
                     <h3 className="text-xl">HTML/CSS/JavaScript</h3>
                     <ul className="list-disc pl-4">
-                        <li><a href="https://github.com/GamingLounge-me/GamingLoungeHomePage" target="_blank" className="link">This Website</a></li>
+                        <li><Link to={{ghRepo: "GamingLounge-me/GamingLoungeHomePage"}} newTab className="link">This Website</Link></li>
                     </ul>
                 </div>
 

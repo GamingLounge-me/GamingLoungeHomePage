@@ -1,5 +1,5 @@
 import { CSSProperties, FunctionComponent, PropsWithChildren, ReactNode } from 'react';
-import { Link } from 'react-router-dom'
+import Link from './link';
 
 type TextColor = "light" | "dark" | "theme";
 type Position = "right" | "left" | "center";
@@ -55,7 +55,7 @@ export const Block: FunctionComponent<PropsWithChildren<BlockProps>> = ({section
                     getTextColorStyle(textColor) +
                     "card-body rounded-[inherit]"}>
                 <h2 className={(section ? "link link-hover " : "") + "text-3xl"}>
-                    {section ? <Link to={"#" + section}>{title}</Link> : title}
+                    {section ? <Link to={{id: section}}>{title}</Link> : title}
                 </h2>
                 {children}
             </div>

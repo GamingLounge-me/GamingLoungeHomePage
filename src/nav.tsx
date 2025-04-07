@@ -1,6 +1,8 @@
 import { Link, Outlet } from 'react-router-dom'
 import logo from './assets/icon/gaminglounge-64x64.png'
-import { FunctionComponent } from 'react';
+import { CSSProperties, FunctionComponent } from 'react';
+import ImgBgLight from './assets/images/hintergrund01.png?url';
+import ImgBgDark from './assets/images/hintergrund02.png?url';
 
 export type NavData = {
     mobile: {
@@ -23,7 +25,18 @@ const Nav: FunctionComponent<NavProps> = ({data}) => {
     return (
         <div className="drawer">
             <input id="nav-drawer" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content bg-fixed bg-center bg-no-repeat bg-cover bg-[url(./assets/images/hintergrund01.png)] dark:bg-[url(./assets/images/hintergrund02.png)]">
+            <div
+                className="drawer-content
+                    bg-fixed
+                    bg-center
+                    bg-no-repeat
+                    bg-cover
+                    bg-(image:--img-bg-light)
+                    dark:bg-(image:--img-bg-dark)"
+                style={{
+                    '--img-bg-light': `url("${ImgBgLight}")`,
+                    '--img-bg-dark': `url("${ImgBgDark}")`,
+                } as CSSProperties}>
                 <header className="navbar bg-base-200 sticky top-0">
                     <div className="navbar-start text-xl normal-case">
                         <Link to={"/"}><img src={logo} alt="logo" className="w-full h-full" /></Link>

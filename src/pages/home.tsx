@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react';
 import { Link } from 'react-router-dom'
 import ImgMc from './../assets/images/MC.png?url';
 import ImgCoding from './../assets/images/coding.jpg?url';
-import { Block, BlockHolder } from '../components/Block';
+import { Block, BlockHolder } from '../components/block';
 
 const Home: FunctionComponent = () => {
     return (

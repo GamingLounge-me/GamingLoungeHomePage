@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import ReactDOM from 'react-dom/client'
-import NoPage from './pages/NoPage.tsx'
+import NoPage from './pages/noPage.tsx'
 import Nav, { NavData } from './nav.tsx'
 import Home from './pages/home.tsx'
-import RulesPage from './pages/Rules.tsx'
+import RulesPage from './pages/rules.tsx'
 import Endless from './pages/minecraft/endless.tsx'
 import Zombies from './pages/minecraft/hypixel/arcade/zombies.tsx'
 import Alien_Arcadium from './pages/minecraft/hypixel/arcade/zombies/alien_arcadium.tsx'

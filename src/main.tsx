@@ -7,7 +7,7 @@ import RulesPage from './pages/rules.tsx'
 import Endless from './pages/minecraft/endless.tsx'
 import Zombies from './pages/minecraft/hypixel/arcade/zombies.tsx'
 import Alien_Arcadium from './pages/minecraft/hypixel/arcade/zombies/alien_arcadium.tsx'
-import Linux_Commands from './pages/os/linux/Commands.tsx'
+import Linux_Commands from './pages/os/linux/commands.tsx'
 import ProxMox from './pages/hypervisor/proxmox.tsx'
 
 const main: NavData = {

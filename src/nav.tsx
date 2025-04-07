@@ -37,7 +37,7 @@ const Nav: FunctionComponent<NavProps> = ({data}) => {
                     '--img-bg-light': `url("${ImgBgLight}")`,
                     '--img-bg-dark': `url("${ImgBgDark}")`,
                 } as CSSProperties}>
-                <header className="navbar bg-base-200 sticky top-0">
+                <header className="navbar bg-base-200 sticky top-0 z-40">
                     <div className="navbar-start text-xl normal-case">
                         <Link to={"/"}><img src={logo} alt="logo" className="w-full h-full" /></Link>
                         <Link to={"/"}>
@@ -99,6 +99,7 @@ const Nav: FunctionComponent<NavProps> = ({data}) => {
             <div className="drawer-side">
                 <label htmlFor="nav-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content overflow-scroll flex-nowrap">
+                    <li className="invisible"><header className="navbar"><div className="h-[64px]" /></header></li>
                     {
                         data.links.map(({display, link}, idx) => (
                             <li key={idx}><Link className="btn btn-ghost text-xl normal-case" to={link}>{display}</Link></li>

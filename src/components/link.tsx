@@ -57,15 +57,20 @@ const toPath: (dest: LinkDestination) => Partial<Path>|string = (dest) => {
         return `https://map.gaminglounge.me/${dest.map}/`;
     if("ghRepo" in dest)
         return `https://github.com/${dest.ghRepo}`;
-    throw new Error("unknown destination to link");
+
+    const _exhaustiveCheck: never = dest;
+    return _exhaustiveCheck;
 };
 
 const Link: FunctionComponent<PropsWithChildren<{
     to: LinkDestination,
     newTab?: boolean,
-} & Omit<LinkProps, "to"> & RefAttributes<HTMLAnchorElement>>> = (props) => (
-    <RRLink {...props} to={toPath(props.to)} target={props.newTab ? "_blank" : ""} />
-);
+} & Omit<LinkProps, "to"> & RefAttributes<HTMLAnchorElement>>> = (props) => {
+    const { newTab: _, ...cProps } = props;
+    return (
+        <RRLink {...cProps} to={toPath(props.to)} target={props.newTab ? "_blank" : ""} />
+    );
+};
 
 export default Link;
 

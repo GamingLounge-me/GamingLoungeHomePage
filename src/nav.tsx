@@ -84,10 +84,10 @@ const Nav: FunctionComponent<NavProps> = ({data}) => {
                     <nav>
                         <h6 className="footer-title text-xl normal-case">Social</h6>
                         <div className="grid grid-flow-col gap-4">
-                            <a href="https://youtube.gaminglounge.me/" target="_blank"><ImgIconYT className="w-8 h-8 fill-[red]" /></a>
-                            <a href="https://tiktok.gaminglounge.me/" target="_blank"><ImgIconTT className="w-8 h-8 fill-[black]" /></a>
-                            <a href="https://discord.gaminglounge.me/" target="_blank"><ImgIconDC className="w-8 h-8 fill-[#5865F2]" /></a>
-                            <a href="https://github.gaminglounge.me/" target="_blank"><ImgIconGH className="w-8 h-8 fill-[#24292f]" /></a>
+                            <a href="https://youtube.gaminglounge.me/" target="_blank"><ImgIconYT className="w-8 h-8 fill-neutral-content" /></a>
+                            <a href="https://tiktok.gaminglounge.me/" target="_blank"><ImgIconTT className="w-8 h-8 fill-neutral-content" /></a>
+                            <a href="https://discord.gaminglounge.me/" target="_blank"><ImgIconDC className="w-8 h-8 fill-neutral-content" /></a>
+                            <a href="https://github.gaminglounge.me/" target="_blank"><ImgIconGH className="w-8 h-8 fill-neutral-content" /></a>
                         </div>
                     </nav>
                 </footer>

@@ -1,26 +1,48 @@
+import { FunctionComponent } from 'react';
 import { Link } from 'react-router-dom'
+import { Block, BlockHolder } from '../../../../components/block';
+import ImgDeadEnd from '../../../../assets/images/hypixel-zombies-dead_end.png?url';
+import ImgBadBlood from '../../../../assets/images/hypixel-zombies-bad_blood.png?url';
+import ImgAlienArcadium from '../../../../assets/images/hypixel-zombies-alien_arcadium.png?url';
+import ImgPrison from '../../../../assets/images/hypixel-zombies-prison.png?url';
 
-const Zombies = () => {
+const Zombies: FunctionComponent = () => {
     return (
-        <>
-            <div className="full-block right empty minecraft-hypixel-zombies-dead_end">
-                <h1><a id="dead_end" href="#dead_end">Dead End</a></h1>
-            </div>
-
-            <div className="full-block right empty minecraft-hypixel-zombies-bad_blood">
-                <h1><a id="bad_blood" href="#bad_blood">Bad Blood</a></h1>
-            </div>
-
-            <div className="full-block right empty minecraft-hypixel-zombies-alien_arcadium">
-                <h1><a id="alien_arcadium" href="#alien_arcadium">Alien Arcadium</a></h1>
-                <button><Link to="/minecraft/hypixel/arcade/zombies/alien_arcadium/">more information</Link></button>
-            </div >
-
-            <div className="full-block right empty minecraft-hypixel-zombies-prison">
-                <h1><a id="prison" href="#prison">Prison</a></h1>
-            </div>
-        </>
-    )
+        <BlockHolder>
+            <Block
+                    section="dead_end"
+                    title="Deadend"
+                    image={ImgDeadEnd}
+                    textColor="light" >
+                <div className="py-25" />
+            </Block>
+            <Block
+                    section="bad_blood"
+                    title="Bad Blood"
+                    image={ImgBadBlood}
+                    textColor="light" >
+                <div className="py-25" />
+            </Block>
+            <Block
+                    section="alien_arcadium"
+                    title="Alien Arcadium"
+                    image={ImgAlienArcadium}
+                    textColor="light" >
+                <div className="py-20" />
+                <div className="card-actions justify-end">
+                    <Link to="/minecraft/hypixel/arcade/zombies/alien_arcadium/" className="btn">More information</Link>
+                </div>
+            </Block>
+            <Block
+                    section="prison"
+                    title="Prison"
+                    image={ImgPrison}
+                    textColor="light" >
+                <div className="py-25" />
+            </Block>
+        </BlockHolder>
+    );
 };
 
-export default Zombies
+export default Zombies;
+

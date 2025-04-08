@@ -97,6 +97,8 @@ export const NavOverride: FunctionComponent<PropsWithChildren<{
     );
 };
 
+export const DrawerCloseContext = createContext<(() => void) | undefined>(undefined);
+
 
 const navElemVis: (visability?: NavVisability) => string = (visability) => {
     const desktop = "hidden md:flex ";
@@ -135,11 +137,15 @@ const Nav: FunctionComponent<{
     nav: NavElement[],
 }> = ({nav}) => {
     const [ctxData, nnav] = useNavOverride(nav, false);
+    const [drawerOpen, setDrawerOpen] = useState(false);
+
+    const closeDrawer = useCallback(() => setDrawerOpen(false), [ setDrawerOpen ]);
+
     return (
-        <>
+        <DrawerCloseContext.Provider value={closeDrawer}>
             <ScrollRestoration />
             <div className="drawer">
-                <input id="nav-drawer" type="checkbox" className="drawer-toggle" />
+                <input id="nav-drawer" type="checkbox" className="drawer-toggle" checked={drawerOpen} onChange={e => setDrawerOpen(e.target.checked)} />
                 <div
                     className="drawer-content
                         bg-fixed
@@ -206,7 +212,7 @@ const Nav: FunctionComponent<{
                     </ul>
                 </div>
             </div>
-        </>
+        </DrawerCloseContext.Provider>
     );
 };
 

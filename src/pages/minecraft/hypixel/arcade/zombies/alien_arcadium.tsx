@@ -1,6 +1,68 @@
 import { FunctionComponent } from "react";
 import { Block, BlockHolder } from "../../../../../components/block";
 
+type tRow = {
+    round: number,
+    zombies: string,
+    boss: string,
+    perks: string[],
+    corner: string,
+    other: string,
+};
+
+const genTableData: () => tRow[] = () => {
+    let arr = new Array(105 + 1).fill({
+        round: 0,
+        zombies: "",
+        boss: "",
+        perks: [],
+        corner: "",
+        other: "",
+    } as tRow) as tRow[];
+
+    arr = arr.map((value, idx) => ({...value, round: idx}));
+
+    [ 18, 23, 26, 29, 31, 33, 34, 39, 43, 47, 52 ].forEach(n => arr[n].zombies = "Slimes");
+    arr[60].zombies = "80 Baby Space Shooters";
+
+    arr[10].boss = "UFO is opening, zombies from above";
+    arr[15].boss = "Gold Armor Giant";
+    arr[20].boss = "Iron Armor Giant";
+    arr[25].boss = "Mega Blob";
+    arr[30].boss = "Diamond Armor Giant";
+    arr[35].boss = "Mega Magma";
+    arr[40].boss = "the Old One";
+    arr[45].boss = "2";
+    arr[46].boss = "1";
+    arr[48].boss = "1";
+    arr[54].boss = "Rainbow Giant + 2";
+    arr[55].boss = "Frozen bullets";
+    arr[56].boss = "Mega Blob";
+    arr[57].boss = "Mega Magma";
+    arr[59].boss = "13";
+    arr[60].boss = "10";
+    arr[64].boss = "Frozen bullets";
+    arr[101].boss = "World Ender";
+
+    arr[20].perks = ["Fast revive", "Quickfire", "Extra Health 3"];
+
+    const lc = "lucky chest";
+    const um = "Ultimate maschine";
+    const fwc = "Ferris wheel, back corner";
+    arr.map(v => v.round).filter(r => r >= 25).forEach(r => arr[r].corner = lc);
+    arr.map(v => v.round).filter(r => r >= 50).forEach(r => arr[r].corner = um);
+    [ 18, 23, 52 ].forEach(r => arr[r].corner = lc);
+    [ 53, 54, 58, 59 ].forEach(r => arr[r].corner = fwc);
+
+    arr[10].other = "You can start, open doors";
+    arr[55].other = "2/4 player need, Diamond Chestplate";
+
+    return arr;
+};
+
+const table = genTableData();
+
+
 const AlienArcadiumPage: FunctionComponent = () => {
     return (
         <BlockHolder>
@@ -90,122 +152,18 @@ const AlienArcadiumPage: FunctionComponent = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>1</td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>2</td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>3</td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>4</td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>5</td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>6</td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>7</td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>8</td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>9</td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>10</td><td></td><td>UFO is opening,<br />zombies from above.</td><td></td><td></td><td>You can start,<br /> open doors</td></tr>
-                        <tr><td>11</td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>12</td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>13</td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>14</td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>15</td><td></td><td>Gold Armor Giant</td><td></td><td></td><td></td></tr>
-                        <tr><td>16</td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>17</td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>18</td><td>Slimes</td><td></td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>19</td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr>
-                            <td>20</td>
-                            <td></td>
-                            <td>Iron Armor Giant</td>
+                    { table.map((e, idx) => (<tr key={idx}>
+                            <td>{e.round}</td>
+                            <td>{e.zombies}</td>
+                            <td>{e.boss}</td>
                             <td>
-                                <p>Fast revive</p>
-                                <p>Quickfire</p>
-                                <p>Extra Healtd 3</p>
+                                 {e.perks.length > 0 && (<ul className="pl-4 list-disc">
+                                    { e.perks.map((perk, idx) => (<li key={idx}>{perk}</li>)) }
+                                </ul>) }
                             </td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr><td>21</td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>22</td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>23</td><td>Slimes</td><td></td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>24</td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>25</td><td></td><td>Mega Blob</td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>26</td><td>Slimes</td><td></td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>27</td><td></td><td></td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>28</td><td></td><td></td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>29</td><td>Slimes</td><td></td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>30</td><td></td><td>Diamond Armor Giant</td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>31</td><td>Slimes</td><td></td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>32</td><td></td><td></td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>33</td><td>Slimes</td><td></td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>34</td><td>Slimes</td><td></td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>35</td><td></td><td>Mega Magma</td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>36</td><td></td><td></td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>37</td><td></td><td></td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>38</td><td></td><td></td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>39</td><td>Slimes</td><td></td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>40</td><td></td><td>tde Old One</td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>41</td><td></td><td></td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>42</td><td></td><td></td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>43</td><td>Slimes</td><td></td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>44</td><td></td><td></td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>45</td><td></td><td>2</td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>46</td><td></td><td>1</td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>47</td><td>Slimes</td><td></td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>48</td><td></td><td>1</td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>49</td><td></td><td></td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>50</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>51</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>52</td><td>Slimes</td><td></td><td></td><td>lucky chest</td><td></td></tr>
-                        <tr><td>53</td><td></td><td></td><td></td><td>Ferris wheel,<br />back corner</td><td></td></tr>
-                        <tr><td>54</td><td></td><td>Rainbow Giant + 2</td><td></td><td>Ferris wheel,<br />back corner</td><td></td></tr>
-                        <tr><td>55</td><td></td><td>Frozen bullets</td><td></td><td>Ultimate maschine</td><td>2/4 player need,<br />Diamond Chestplate</td></tr>
-                        <tr><td>56</td><td></td><td>Mega Blob</td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>57</td><td></td><td>Mega Magma</td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>58</td><td></td><td></td><td></td><td>Ferris wheel,<br />back corner</td><td></td></tr>
-                        <tr><td>59</td><td></td><td>13</td><td></td><td>Ferris wheel,<br />back corner</td><td></td></tr>
-                        <tr><td>60</td><td>80 Baby Space Shooters</td><td>10</td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>61</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>62</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>63</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>64</td><td></td><td>Frozen bullets</td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>65</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>66</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>67</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>68</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>69</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>70</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>71</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>72</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>73</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>74</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>75</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>76</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>77</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>78</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>79</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>80</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>81</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>82</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>83</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>84</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>85</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>86</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>87</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>88</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>89</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>90</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>91</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>92</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>93</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>94</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>95</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>96</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>97</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>98</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>99</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>100</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>101</td><td></td><td>World Ender</td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>102</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>103</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>104</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
-                        <tr><td>105</td><td></td><td></td><td></td><td>Ultimate maschine</td><td></td></tr>
+                            <td>{e.corner}</td>
+                            <td>{e.other}</td>
+                        </tr>)) }
                     </tbody>
                 </table>
             </Block>

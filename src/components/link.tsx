@@ -37,7 +37,7 @@ type GHLinkDestination = {
     ghRepo: string,
 }
 
-type LinkDestination =
+export type LinkDestination =
     ( string
     | IDLinkDestination
     | MailToLinkDestination

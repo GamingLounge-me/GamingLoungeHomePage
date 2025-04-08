@@ -1,32 +1,40 @@
-const NoPage = () => {
+import { FunctionComponent } from "react";
+import { Block, BlockHolder } from "../../../../../components/block";
+
+const AlienArcadiumPage: FunctionComponent = () => {
     return (
-        <>
-            <div className="blocksite">
-
-                <div className="block">
-                    <h1>Playstyle</h1>
-                    <br /><h3>Lucky Chest</h3>
-                    <p>Only open Lucky Chests during Shoping Spree</p><br />
+        <BlockHolder>
+            <Block title="Playstyle">
+                <div>
+                    <h4 className="text-xl">Lucky Chest</h4>
+                    <p>Only open Lucky Chests during Shoping Spree</p>
                     <p>Shping Spree spawn every 10 rounds.</p>
-                    <br /><h3>Eco-Rounds</h3>
-                    <p>Everyone sneek in an corner (lucky chest or upgrade machine for example) and wait for slimes to grow,<br /> while waiting block witd tde sword.</p>
-                    <p>tdis could be also usefull at some otder rounds witd many zombies.</p>
-                    <br /><h3>Reviving</h3>
-                    <p>After being revived you need to press shift again, if you dont you wont revive anyone.</p>
-                    <br /><h3>Boosts</h3>
-                    <p>insta kill -&gt;  Dont take it.</p>
                 </div>
+                <div>
+                    <h4 className="text-xl">Eco-Rounds</h4>
+                    <p>Everyone sneek in an corner (lucky chest or upgrade machine for example) and wait for slimes to grow, while waiting block with the sword.</p>
+                    <p>This could be also usefull at some otder rounds witd many zombies.</p>
+                </div>
+                <div>
+                    <h4 className="text-xl">Reviving</h4>
+                    <p>After being revived you need to press shift again, if you dont you wont revive anyone.</p>
+                </div>
+                <div>
+                    <h4 className="text-xl">Boosts</h4>
+                    <p>insta kill -&gt;  Don't take it.</p>
+                </div>
+            </Block>
 
-                <div className="block">
-                    <h1>Loadout</h1>
-                    <br /><h3>Round 1-49</h3>
-                    <ul>
+            <Block title="Loadout">
+                <div>
+                    <h4 className="text-xl">Round 1-49</h4>
+                    <ul className="list-disc pl-4">
                         <li>Sword</li>
                         <li>Pistol</li>
                         <li>Shotgun</li>
                         <li>
-                            One of tde following:
-                            <ul>
+                            One of the following:
+                            <ul className="list-disc pl-4">
                                 <li>Double Barrel Shotgun</li>
                                 <li>Rainbow Rifel</li>
                                 <li>Zombie Zapper</li>
@@ -34,8 +42,10 @@ const NoPage = () => {
                         </li>
                         <li>Lighting rod skill</li>
                     </ul>
-                    <br /><h3>Round 50+</h3>
-                    <ul>
+                </div>
+                <div>
+                    <h4 className="text-xl">Round 50+</h4>
+                    <ul className="list-disc pl-4">
                         <li>Sword</li>
                         <li>Rainbow Rifel</li>
                         <li>Zombie Zapper</li>
@@ -43,25 +53,31 @@ const NoPage = () => {
                         <li>Lighting rod skill</li>
                     </ul>
                 </div>
+            </Block>
 
-                <div className="block">
-                    <h1>Perks</h1>
-                    <ul>
+            <Block title="Perks">
+                <div>
+                    <ul className="list-disc pl-4">
                         <li>Fast revive</li>
                         <li>Quickfire</li>
-                        <li>Extra healtd</li>
+                        <li>Extra health</li>
                     </ul>
                 </div>
+            </Block>
 
-                <div className="block">
-                    <h1>Explanations for table</h1>
-                    <ul>
-                        <li>Zombies: Slimes -&gt;  Wait 35 secounds in an corner witd all players crouching and blocking witd sword so tde slimes grow and have more hp to get more money.</li>
-                        <li>Perks: Frozen bullets -&gt;  1 Person witd Rainbow rifle, replace quickfore witd frozen bullets, shoot spread out to freeze zombies.
-                            <br />-&gt; After tde round Frozen bullets can be replaced again.</li>
+            <Block title="Explanations for table">
+                <div>
+                    <ul className="list-disc pl-4">
+                        <li>Zombies: Slimes -&gt;  Wait 35 secounds in an corner with all players crouching and blocking with sword so the slimes grow and have more hp to get more money.</li>
+                        <li>
+                            <p>Perks: Frozen bullets -&gt;  1 Person with Rainbow rifle, replace quickfire with frozen bullets, shoot spread out to freeze zombies.</p>
+                            <p>-&gt; After the round Frozen bullets can be replaced again.</p>
+                        </li>
                     </ul>
                 </div>
+            </Block>
 
+            <Block title="Table">
                 <table>
                     <thead>
                         <tr>
@@ -70,7 +86,7 @@ const NoPage = () => {
                             <td>Boss</td>
                             <td>Perks</td>
                             <td>corner</td>
-                            <td>Otder</td>
+                            <td>Other</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -921,9 +937,10 @@ const NoPage = () => {
                         </tr>
                     </tbody>
                 </table>
-            </div>
-        </>
-    )
+            </Block>
+        </BlockHolder>
+    );
 };
 
-export default NoPage
+export default AlienArcadiumPage;
+

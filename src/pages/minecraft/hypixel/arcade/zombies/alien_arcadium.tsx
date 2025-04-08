@@ -57,7 +57,7 @@ const genTableData: () => tRow[] = () => {
     arr[10].other = "You can start, open doors";
     arr[55].other = "2/4 player need, Diamond Chestplate";
 
-    return arr;
+    return arr.filter((_, idx) => idx != 0);
 };
 
 const table = genTableData();
@@ -142,7 +142,7 @@ const AlienArcadiumPage: FunctionComponent = () => {
             <Block title="Table">
                 <table>
                     <thead>
-                        <tr>
+                        <tr className="sticky top-20 bg-base-100">
                             <td>Round</td>
                             <td>Zombies</td>
                             <td>Boss</td>
@@ -152,7 +152,7 @@ const AlienArcadiumPage: FunctionComponent = () => {
                         </tr>
                     </thead>
                     <tbody>
-                    { table.map((e, idx) => (<tr key={idx}>
+                    { table.map((e, idx) => (<tr key={idx} className={idx % 2 > 0 ? "bg-base-100" : "bg-base-300"}>
                             <td>{e.round}</td>
                             <td>{e.zombies}</td>
                             <td>{e.boss}</td>

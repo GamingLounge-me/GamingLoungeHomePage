@@ -156,7 +156,10 @@ const Nav: FunctionComponent<{
                         bg-no-repeat
                         bg-cover
                         bg-(image:--img-bg-light)
-                        dark:bg-(image:--img-bg-dark)"
+                        dark:bg-(image:--img-bg-dark)
+                        flex
+                        flex-col
+                        min-h-screen"
                     style={{
                         '--img-bg-light': `url("${ImgBgLight}")`,
                         '--img-bg-dark': `url("${ImgBgDark}")`,
@@ -186,9 +189,11 @@ const Nav: FunctionComponent<{
                             </ul>
                         </div>
                     </header>
-                    <NavOverideContext.Provider value={ctxData}>
-                        <Outlet />
-                    </NavOverideContext.Provider>
+                    <main className="flex-grow">
+                        <NavOverideContext.Provider value={ctxData}>
+                            <Outlet />
+                        </NavOverideContext.Provider>
+                    </main>
                     <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
                         <aside>
                             <h6 className="footer-title text-xl normal-case">Contact</h6>

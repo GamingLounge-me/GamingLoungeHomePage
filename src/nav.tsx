@@ -1,6 +1,6 @@
 import { Outlet, ScrollRestoration } from 'react-router-dom'
 import logo from './assets/icon/gaminglounge-64x64.png'
-import { createContext, CSSProperties, FunctionComponent, PropsWithChildren, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import { createContext, CSSProperties, FunctionComponent, PropsWithChildren, ReactNode, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import ImgBgLight from './assets/images/hintergrund01.png?url';
 import ImgBgDark from './assets/images/hintergrund02.png?url';
 import ImgIconYT from './assets/icon/youtube.svg?react';
@@ -137,15 +137,18 @@ const Nav: FunctionComponent<{
     nav: NavElement[],
 }> = ({nav}) => {
     const [ctxData, nnav] = useNavOverride(nav, false);
-    const [drawerOpen, setDrawerOpen] = useState(false);
+    const drawerOpenRef = useRef<HTMLInputElement>(null);
 
-    const closeDrawer = useCallback(() => setDrawerOpen(false), [ setDrawerOpen ]);
+    const closeDrawer = useCallback(() => {
+        if(drawerOpenRef.current)
+            drawerOpenRef.current.checked = false
+    }, [ drawerOpenRef ]);
 
     return (
         <DrawerCloseContext.Provider value={closeDrawer}>
             <ScrollRestoration />
             <div className="drawer">
-                <input id="nav-drawer" type="checkbox" className="drawer-toggle" checked={drawerOpen} onChange={e => setDrawerOpen(e.target.checked)} />
+                <input id="nav-drawer" type="checkbox" className="drawer-toggle" ref={drawerOpenRef} />
                 <div
                     className="drawer-content
                         bg-fixed

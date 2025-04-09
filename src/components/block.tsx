@@ -43,7 +43,6 @@ export const BlockHolder: FunctionComponent<PropsWithChildren> = ({children}) =>
 export const Block: FunctionComponent<PropsWithChildren<BlockProps>> = ({section, title, position, image, textColor, children}) => {
     return (
         <div
-                id={section}
                 className={
                     (image ? "bg-(image:--img-bg-card) bg-local bg-center bg-no-repeat bg-cover " : "bg-base-100 ") +
                     getPositionStyle(position) +
@@ -51,6 +50,7 @@ export const Block: FunctionComponent<PropsWithChildren<BlockProps>> = ({section
                 style={image ? {
                     '--img-bg-card': `url("${image}")`,
                 } as CSSProperties : {}} >
+            <div id={section} className="absolute -top-20" />
             <div className={(image ? "backdrop-brightness-70 dark:backdrop-brightness-30 " : "") +
                     getTextColorStyle(textColor) +
                     "card-body rounded-[inherit]"}>

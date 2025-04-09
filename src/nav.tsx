@@ -204,10 +204,9 @@ const Nav: FunctionComponent<{
                         </nav>
                     </footer>
                 </div>
-                <div className="drawer-side">
+                <div className="drawer-side h-[calc(100vh-4rem)] top-16">
                     <label htmlFor="nav-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content overflow-scroll flex-nowrap">
-                        <li className="invisible"><header className="navbar"><div className="h-[64px]" /></header></li>
+                    <ul className="menu p-4 pt-8 w-80 h-full bg-base-200 text-base-content overflow-scroll flex-nowrap">
                         {nnav.map((elem, idx) => <NavElementR inDrawer={true} elem={elem} key={idx} drawerID={"nav-drawer"} />)}
                     </ul>
                 </div>

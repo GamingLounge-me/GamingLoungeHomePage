@@ -184,7 +184,7 @@ const Nav: FunctionComponent<{
 
                         <div className="navbar-end">
                             <ul className="flex">
-                                {nnav.map((elem, idx) => <li><NavElementR inDrawer={false} elem={elem} key={idx} drawerID={"nav-drawer"} /></li>)}
+                                {nnav.map((elem, idx) => <li key={idx}><NavElementR inDrawer={false} elem={elem} drawerID={"nav-drawer"} /></li>)}
                             </ul>
                         </div>
                     </header>
@@ -214,7 +214,7 @@ const Nav: FunctionComponent<{
                 <div className="drawer-side h-[calc(100vh-4rem)] top-16">
                     <label htmlFor="nav-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
                     <ul className="menu p-4 pt-8 w-80 h-full bg-base-200 text-base-content overflow-scroll flex-nowrap">
-                        {nnav.map((elem, idx) => <li><NavElementR inDrawer={true} elem={elem} key={idx} drawerID={"nav-drawer"} /></li>)}
+                        {nnav.map((elem, idx) => <li key={idx}><NavElementR inDrawer={true} elem={elem} drawerID={"nav-drawer"} /></li>)}
                     </ul>
                 </div>
             </div>

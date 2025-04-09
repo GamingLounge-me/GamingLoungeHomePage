@@ -97,7 +97,8 @@ export const NavOverride: FunctionComponent<PropsWithChildren<{
     );
 };
 
-export const DrawerCloseContext = createContext<(() => void) | undefined>(undefined);
+const DrawerCloseContext = createContext<(() => void) | undefined>(undefined);
+export const useDrawerClose = () => useContext(DrawerCloseContext);
 
 
 const navElemVis: (visability?: NavVisability) => string = (visability) => {

@@ -1,6 +1,6 @@
-import { FunctionComponent, PropsWithChildren, RefAttributes, useContext } from "react";
+import { FunctionComponent, PropsWithChildren, RefAttributes } from "react";
 import { LinkProps, Path, Link as RRLink } from "react-router-dom";
-import { DrawerCloseContext } from "../nav";
+import { useDrawerClose } from "../nav";
 
 /**
  * link to an element with `id`
@@ -67,7 +67,7 @@ const Link: FunctionComponent<PropsWithChildren<{
     to: LinkDestination,
     newTab?: boolean,
 } & Omit<LinkProps, "to"> & RefAttributes<HTMLAnchorElement>>> = (props) => {
-    const closeDrawer = useContext(DrawerCloseContext);
+    const closeDrawer = useDrawerClose();
     const { newTab: _, ...cProps } = props;
     return (
         <RRLink {...cProps} to={toPath(props.to)} target={props.newTab ? "_blank" : ""} onClick={() => closeDrawer?.()} />

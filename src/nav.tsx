@@ -8,6 +8,7 @@ import ImgIconTT from './assets/icon/tiktok.svg?react'
 import ImgIconDC from './assets/icon/discord.svg?react'
 import ImgIconGH from './assets/icon/github.svg?react'
 import Link, { LinkDestination } from './components/link';
+import { DrawerCloseProvider } from './components/closeDrawer';
 
 export type NavElement = {
     text: ReactNode,
@@ -97,9 +98,6 @@ export const NavOverride: FunctionComponent<PropsWithChildren<{
     );
 };
 
-const DrawerCloseContext = createContext<(() => void) | undefined>(undefined);
-export const useDrawerClose = () => useContext(DrawerCloseContext);
-
 
 const navElemVis: (visability?: NavVisability) => string = (visability) => {
     const desktop = "hidden md:flex ";
@@ -146,7 +144,7 @@ const Nav: FunctionComponent<{
     }, [ drawerOpenRef ]);
 
     return (
-        <DrawerCloseContext.Provider value={closeDrawer}>
+        <DrawerCloseProvider value={closeDrawer}>
             <ScrollRestoration />
             <div className="drawer">
                 <input id="nav-drawer" type="checkbox" className="drawer-toggle" ref={drawerOpenRef} />
@@ -220,7 +218,7 @@ const Nav: FunctionComponent<{
                     </ul>
                 </div>
             </div>
-        </DrawerCloseContext.Provider>
+        </DrawerCloseProvider>
     );
 };
 

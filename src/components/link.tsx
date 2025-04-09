@@ -1,6 +1,6 @@
 import { FunctionComponent, PropsWithChildren, RefAttributes } from "react";
 import { LinkProps, Path, Link as RRLink } from "react-router-dom";
-import { useDrawerClose } from "../nav";
+import { useDrawerClose } from "./closeDrawer";
 
 /**
  * link to an element with `id`

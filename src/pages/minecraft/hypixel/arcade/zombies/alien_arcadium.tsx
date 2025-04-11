@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import { Block, BlockHolder } from "../../../../../components/block";
+import { Block, BlockHolder, TableBlock } from "../../../../../components/block";
 
 type tRow = {
     round: number,
@@ -139,35 +139,31 @@ const AlienArcadiumPage: FunctionComponent = () => {
                 </div>
             </Block>
 
-            <Block title="Table">
-                <table>
-                    <thead>
-                        <tr className="sticky top-20 bg-base-100">
-                            <td>Round</td>
-                            <td>Zombies</td>
-                            <td>Boss</td>
-                            <td>Perks</td>
-                            <td>corner</td>
-                            <td>Other</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    { table.map((e, idx) => (<tr key={idx} className={idx % 2 > 0 ? "bg-base-100" : "bg-base-300"}>
-                            <td>{e.round}</td>
-                            <td>{e.zombies}</td>
-                            <td>{e.boss}</td>
-                            <td>
-                                 {e.perks.length > 0 && (<ul className="pl-4 list-disc">
-                                    { e.perks.map((perk, idx) => (<li key={idx}>{perk}</li>)) }
-                                </ul>) }
-                            </td>
-                            <td>{e.corner}</td>
-                            <td>{e.other}</td>
-                        </tr>)) }
-                    </tbody>
-                </table>
-            </Block>
-        </BlockHolder>
+            <TableBlock
+                data={table}
+                render={{
+                    round: (value) => value,
+                    zombies: (value) => value,
+                    boss: (value) => value,
+                    perks: (value) => value.length > 0 ? (<ul className="pl-4 list-disc">
+                        {value.map((perk, idx) => (<li key={idx}>{perk}</li>))}
+                    </ul>) : "",
+                    corner: (value) => value,
+                    other: (value) => value,
+                }}
+                view={[
+                    { collum: "round", title: "Round" },
+                    { collum: "zombies", title: "Zombies" },
+                    { collum: "boss", title: "Boss" },
+                    { collum: "perks", title: "Perks" },
+                    { collum: "corner", title: "Corner" },
+                    { collum: "other", title: "Other" },
+                ]}
+                title="Table"
+                section="table"
+            />
+
+        </BlockHolder >
     );
 };
 

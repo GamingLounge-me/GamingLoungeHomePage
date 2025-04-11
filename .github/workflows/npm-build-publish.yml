@@ -25,7 +25,7 @@ jobs:
       run: npm run build
 
     - name: create key file
-      run: echo ${{ secrets.SSH_KEY }} > key.priv
+      run: echo "${{ secrets.SSH_KEY }}" > key.priv
 
     - name: clear folder
       run: ssh ${{ secrets.SSH_USERNAME }} -i key.priv 'rm -rf ${{ secrets.DESTINATION_FOLDER }}/*'    

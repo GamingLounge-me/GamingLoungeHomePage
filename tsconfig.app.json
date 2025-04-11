@@ -22,7 +22,7 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
-    "roorDirs": [".", "./.react-router/types"]
+    "rootDirs": [".", "./.react-router/types"]
   },
   "include": ["src", ".react-router/types/**/*"]
 }

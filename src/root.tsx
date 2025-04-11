@@ -1,5 +1,5 @@
 import { FunctionComponent, PropsWithChildren } from "react";
-import { Links, Meta, Outlet, Scripts } from "react-router-dom";
+import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router-dom";
 import "./styles.css";
 
 
@@ -17,6 +17,7 @@ export const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
         </head>
         <body>
             {children}
+            <ScrollRestoration />
             <Scripts />
         </body>
     </html>);

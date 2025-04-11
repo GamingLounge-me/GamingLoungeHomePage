@@ -1,4 +1,4 @@
-import { Outlet, ScrollRestoration } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import logo from './assets/icon/gaminglounge-64x64.png'
 import { createContext, CSSProperties, FunctionComponent, PropsWithChildren, ReactNode, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import ImgBgLight from './assets/images/hintergrund01.png?url';
@@ -145,7 +145,6 @@ const Nav: FunctionComponent<{
 
     return (
         <DrawerCloseProvider value={closeDrawer}>
-            <ScrollRestoration />
             <div className="drawer">
                 <input id="nav-drawer" type="checkbox" className="drawer-toggle" ref={drawerOpenRef} />
                 <div

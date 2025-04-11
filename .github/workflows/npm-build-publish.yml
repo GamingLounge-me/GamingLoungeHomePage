@@ -4,8 +4,10 @@ on: push
 
 jobs:
   build:
-    name: Build
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
+    permissions:
+      contents: read
+      packages: write
 
     steps: 
     - name: Checkout repository

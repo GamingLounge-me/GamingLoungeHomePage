@@ -34,7 +34,7 @@ jobs:
     #  run: scp ${{ secrets.SOURCE_FOLDER }} ${{ secrets.SSH_USERNAME }}:${{ secrets.DESTINATION_HOST }} -i ${{ secrets.SSH_KEY }}
 
     - name: Upload via scp with private key
-      uses: pierrickdelrieu/scp-action@v0.1.0
+      uses: pierrickdelrieu/scp-action@v0.1.2
       with:
         host: ${{ secrets.DESTINATION_HOST }}
         ssh_username: ${{ secrets.SSH_USERNAME }}

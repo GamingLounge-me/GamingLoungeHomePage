@@ -1,6 +1,7 @@
 import { FunctionComponent, PropsWithChildren } from "react";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router-dom";
 import "./styles.css";
+import Icon from './assets/icon/gaminglounge-64x64.png';
 
 
 export const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
@@ -11,6 +12,7 @@ export const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
                 name="viewport"
                 content="width=device-width, initial-scale=1.0"
             />
+            <link rel="icon" href={Icon} />
             <title>GamingLounge</title>
             <Meta />
             <Links />

@@ -1,6 +1,6 @@
 name: build and publish
 
-on: push
+# on: push
 
 jobs:
   build:
@@ -24,22 +24,14 @@ jobs:
     - name: Compile build
       run: npm run build
 
-    - name: create key file
-      run: echo "${{ secrets.SSH_KEY }}" > key.priv
+    #- name: create key file
+    #  run: echo "${{ secrets.SSH_KEY }}" > key.priv
 
-    - name: update linux key file permissons
-      if: runner.os == 'Linux'
-      run: chmod 600 key.priv
+    #- name: update key file permissons
+    #  run: chmod 600 key.priv
 
-    - name: update windows key file permissons
-      if: runner.os == 'Windows'
-      run: |
-        icacls key.priv /inheritance:r
-        icacls key.priv /grant:r "%USERDOMAIN%\%username%":(R)
-      shell: cmd
+    #- name: clear folder
+    #  run: ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.DESTINATION_HOST }} -o "StrictHostKeyChecking no" -i key.priv "find ${{ secrets.DESTINATION_FOLDER }} -type f ! -name '.htaccess' -exec rm {} \;"
 
-    - name: clear folder
-      run: ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.DESTINATION_HOST }} -o "StrictHostKeyChecking no" -i key.priv "find ${{ secrets.DESTINATION_FOLDER }} -type f ! -name '.htaccess' -exec rm {} \;"
-
-    - name: Upload via scp with private key
-      run: scp ${{ secrets.SOURCE_FOLDER }} ${{ secrets.SSH_USERNAME }}:${{ secrets.DESTINATION_HOST }} -o "StrictHostKeyChecking no" -i key.priv
+    #- name: Upload via scp with private key
+    #  run: scp ${{ secrets.SOURCE_FOLDER }} ${{ secrets.SSH_USERNAME }}:${{ secrets.DESTINATION_HOST }} -o "StrictHostKeyChecking no" -i key.priv

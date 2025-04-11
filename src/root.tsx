@@ -2,6 +2,7 @@ import { FunctionComponent, PropsWithChildren } from "react";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router-dom";
 import "./styles.css";
 import Icon from './assets/icon/gaminglounge-64x64.png';
+import { Block, BlockHolder } from "./components/block";
 
 
 export const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
@@ -23,6 +24,17 @@ export const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
             <Scripts />
         </body>
     </html>);
+};
+
+export const HydrateFallback: FunctionComponent = () => {
+    return (
+        <BlockHolder>
+            <Block title="GamingLounge">
+                <p>The website is currently loading. Please Wait.</p>
+                <p className="text-error">This website requires JavaScript to be enabled to work properly.</p>
+            </Block>
+        </BlockHolder>
+    );
 };
 
 const Root: FunctionComponent = () => {

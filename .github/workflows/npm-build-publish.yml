@@ -28,7 +28,7 @@ jobs:
       run: echo "${{ secrets.SSH_KEY }}" > key.priv
 
     - name: clear folder
-      run: ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.DESTINATION_HOST }} -i key.priv 'rm -rf ${{ secrets.DESTINATION_FOLDER }}/*'    
+      run: ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.DESTINATION_HOST }} -i key.priv "rm -rf ${{ secrets.DESTINATION_FOLDER }}*"   
 
     - name: Upload via scp with private key
       run: scp ${{ secrets.SOURCE_FOLDER }} ${{ secrets.SSH_USERNAME }}:${{ secrets.DESTINATION_HOST }} -i ${{ secrets.SSH_KEY }}

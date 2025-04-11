@@ -1,0 +1,27 @@
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps: 
+    - name: Checkout repository
+      uses: actions/checkout@v4.2.2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4.3.0
+    
+    - name: Install dependencies
+      run: npm install
+
+    - name: Compile build
+      run: npm run build
+
+    - name: Upload via scp with private key
+      uses: pierrickdelrieu/scp-action@v0.1.0
+      with:
+        host: ${{ secrets.DESTINATION_HOST }}
+        ssh_username: ${{ secrets.SSH_USERNAME }}
+        ssh_key: ${{ secrets.SSH_KEY }}
+        source_dir: ${{ secrets.SOURCE_FOLDER }}
+        destination_dir: ${{ secrets.DESTINATION_FOLDER }}
+        rm: true

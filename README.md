@@ -18,5 +18,3 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule . index.html [L]
 ```
-
-Trigger workflow

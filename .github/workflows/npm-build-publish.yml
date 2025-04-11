@@ -36,7 +36,7 @@ jobs:
       run: |
         icacls key.priv /inheritance:r
         icacls key.priv /grant:r "%username%":(R)
-      shell: pwsh
+      shell: cmd
 
     - name: clear folder
       run: ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.DESTINATION_HOST }} -o "StrictHostKeyChecking no" -i key.priv "find ${{ secrets.DESTINATION_FOLDER }} -type f ! -name '.htaccess' -exec rm {} \;"

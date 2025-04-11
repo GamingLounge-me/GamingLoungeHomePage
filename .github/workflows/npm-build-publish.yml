@@ -25,7 +25,7 @@ jobs:
       run: npm run build
 
     - name: clear folder
-      run: ssh ${{ secrets.SSH_USERNAME }} -i ${{ secrets.SSH_KEY }} 'rm -rf ${{ secrets.DESTINATION_HOST }}/*'    
+      run: ssh ${{ secrets.SSH_USERNAME }} -i ${{ secrets.SSH_KEY }} 'rm -rf ${{ secrets.DESTINATION_FOLDER }}/*'    
 
     - name: Upload via scp with private key
       run: scp ${{ secrets.SOURCE_FOLDER }} ${{ secrets.SSH_USERNAME }}:${{ secrets.DESTINATION_HOST }} -i ${{ secrets.SSH_KEY }}

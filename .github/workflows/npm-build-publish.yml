@@ -24,21 +24,11 @@ jobs:
     - name: Compile build
       run: npm run build
 
-    #- name: create key file
-    #  run: echo "${{ secrets.SSH_KEY }}" > key.priv
+    - name: create key file
+      run: echo "${{ secrets.SSH_KEY }}" > key.priv
 
-    #- name: clear folder
-    #  run: ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.DESTINATION_HOST }} -o "IdentitiesOnly=yes" -i key.priv "rm -rf ${{ secrets.DESTINATION_FOLDER }}*"   
+    - name: clear folder
+      run: ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.DESTINATION_HOST }} -o "StrictHostKeyChecking no" -i key.priv "rm -rf ${{ secrets.DESTINATION_FOLDER }}*"   
 
-    #- name: Upload via scp with private key
-    #  run: scp ${{ secrets.SOURCE_FOLDER }} ${{ secrets.SSH_USERNAME }}:${{ secrets.DESTINATION_HOST }} -i ${{ secrets.SSH_KEY }}
-
-    - name: Publish
-      uses: nogsantos/scp-deploy@master
-      with:
-        src: ./dist/*
-        host: ${{ secrets.DESTINATION_HOST }}
-        remote: ${{ secrets.DESTINATION_FOLDER }}
-        port: 22
-        user: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_KEY }}
+    - name: Upload via scp with private key
+      run: scp ${{ secrets.SOURCE_FOLDER }} ${{ secrets.SSH_USERNAME }}:${{ secrets.DESTINATION_HOST }} -o "StrictHostKeyChecking no" -i ${{ secrets.SSH_KEY }}

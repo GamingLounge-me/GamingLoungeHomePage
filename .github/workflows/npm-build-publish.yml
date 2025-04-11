@@ -24,11 +24,22 @@ jobs:
     - name: Compile build
       run: npm run build
 
-    - name: create key file
-      run: echo "${{ secrets.SSH_KEY }}" > key.priv
+    #- name: create key file
+    #  run: echo "${{ secrets.SSH_KEY }}" > key.priv
 
-    - name: clear folder
-      run: ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.DESTINATION_HOST }} -o "IdentitiesOnly=yes" -i key.priv "rm -rf ${{ secrets.DESTINATION_FOLDER }}*"   
+    #- name: clear folder
+    #  run: ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.DESTINATION_HOST }} -o "IdentitiesOnly=yes" -i key.priv "rm -rf ${{ secrets.DESTINATION_FOLDER }}*"   
+
+    #- name: Upload via scp with private key
+    #  run: scp ${{ secrets.SOURCE_FOLDER }} ${{ secrets.SSH_USERNAME }}:${{ secrets.DESTINATION_HOST }} -i ${{ secrets.SSH_KEY }}
 
     - name: Upload via scp with private key
-      run: scp ${{ secrets.SOURCE_FOLDER }} ${{ secrets.SSH_USERNAME }}:${{ secrets.DESTINATION_HOST }} -i ${{ secrets.SSH_KEY }}
+      uses: pierrickdelrieu/scp-action@v0.1.0
+      with:
+        host: ${{ secrets.DESTINATION_HOST }}
+        ssh_username: ${{ secrets.SSH_USERNAME }}
+        ssh_key: ${{ secrets.SSH_KEY }}
+        ssh_passphrase: ${{ secrets.SSH_PASSPHRASE }}
+        source_dir: ${{ secrets.SOURCE_FOLDER }}
+        destination_dir: ${{ secrets.DESTINATION_FOLDER }}
+        rm: true

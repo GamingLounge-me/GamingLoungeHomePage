@@ -27,8 +27,11 @@ jobs:
     - name: create key file
       run: echo "${{ secrets.SSH_KEY }}" > key.priv
 
+    - name: update key file permissons
+      run: chmod 600 key.priv
+
     - name: clear folder
-      run: ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.DESTINATION_HOST }} -o "StrictHostKeyChecking no" -i key.priv "rm -rf ${{ secrets.DESTINATION_FOLDER }}* && chmod 600 key.priv "
+      run: ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.DESTINATION_HOST }} -o "StrictHostKeyChecking no" -i key.priv "rm -rf ${{ secrets.DESTINATION_FOLDER }}*"
 
     - name: Upload via scp with private key
       run: scp ${{ secrets.SOURCE_FOLDER }} ${{ secrets.SSH_USERNAME }}:${{ secrets.DESTINATION_HOST }} -o "StrictHostKeyChecking no" -i ${{ secrets.SSH_KEY }}

@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { Fragment, FunctionComponent } from "react";
 
 type SimpleCommandPart = string;
 type ComplexCommandPart = {
@@ -26,15 +26,19 @@ const CommandPartRenderer: FunctionComponent<{
     if("optChilds" in part) {
         return (
            <span className="text-error">
-                {"["}
+                <span className="select-none">{"["}</span>
                 <CommandPartListRenderer list={part.optChilds} />
-                {"]"}
+                <span className="select-none">{"]"}</span>
            </span>
         );
     } else {
         switch(part.type) {
             case 'flag': return (<span className="text-warning">{part.text}</span>);
-            case 'argument': return (<span className="text-success">{"<" + part.text + ">"}</span>);
+            case 'argument': return (<span className="text-success">
+                    <span className="select-none">{"<"}</span>
+                    {part.text}
+                    <span className="select-none">{">"}</span>
+                </span>);
             case 'appliedArgument': return (<span className="text-success">{part.text}</span>);
             case 'literal':
             default:
@@ -47,10 +51,10 @@ const CommandPartListRenderer: FunctionComponent<{
     list: CommandPart[],
 }> = ({list}) => {
     return list.map((part, idx) => (
-        <>
+        <Fragment key={idx}>
             {idx > 0 && <> </>}
-            <CommandPartRenderer part={part} key={idx} />
-        </>
+            <CommandPartRenderer part={part} />
+        </Fragment>
     ));
 };
 

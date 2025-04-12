@@ -100,9 +100,9 @@ type HiddenLinkProps = {
     href: string,
 };
 
-const HiddenLink: FunctionComponent<HiddenLinkProps> = ({href}) => {
+const HiddenLink: FunctionComponent<HiddenLinkProps> = ({ href }) => {
     return (
-        <Link to={{id: href}} className="text-[rgb(0,0,0,0)] link link-hover link-primary">#</Link>
+        <Link to={{ id: href }} className="text-transparent link link-hover link-primary">#</Link>
     );
 };
 

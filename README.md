@@ -8,7 +8,7 @@ Build with:
 
 ## Troubelshooting
 
-If you want to use the java script bases virtual paths you need to redirect all paths to the `index.html`.
+If you want to use the java script bases virtual paths you need to redirect all paths to the `__spa-fallback.html`.
 
 Apache
 `.htaccess`:
@@ -16,5 +16,5 @@ Apache
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule . index.html [L]
+RewriteRule . __spa-fallback.html [L]
 ```

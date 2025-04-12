@@ -1,6 +1,6 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, useMatches } from 'react-router-dom'
 import logo from './assets/icon/gaminglounge-64x64.png'
-import { createContext, CSSProperties, FunctionComponent, PropsWithChildren, ReactNode, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
+import { CSSProperties, FunctionComponent, ReactNode, useCallback, useRef } from 'react';
 import ImgBgLight from './assets/images/hintergrund01.png?url';
 import ImgBgDark from './assets/images/hintergrund02.png?url';
 import ImgIconYT from './assets/icon/youtube.svg?react';
@@ -37,65 +37,17 @@ type NavLink = {
 };
 
 
-type NavOverrideData = {
-    freeOverride: () => void,
-    override: (nav: NavElement[], replace: boolean) => void,
-};
-
-const NavOverideContext = createContext<NavOverrideData | undefined>(undefined);
-
-const useNavOverride: (nav: NavElement[], replace: boolean) => [NavOverrideData, NavElement[]] = (nav, replace) => {
-    const noc = useContext(NavOverideContext);
-    const [ovNav, setOvNav] = useState<NavElement[] | undefined>(undefined);
-    const [ovReplace, setOvReplace] = useState<boolean>(false);
-
-    const freeOv = useCallback(() => {
-        setOvNav(undefined);
-        setOvReplace(false);
-    }, [setOvNav, setOvReplace]);
-
-    const ovOverride = useCallback((ovNav: NavElement[], replace: boolean) => {
-        setOvNav(ovNav);
-        setOvReplace(replace);
-    }, [setOvNav, setOvReplace]);
-
-    const navContext = useMemo(() => {
-        return {
-            freeOverride: freeOv,
-            override: ovOverride,
-        } as NavOverrideData;
-    }, [freeOv, ovOverride]);
-
-    const nnav = useMemo(() => {
-        if(ovNav === undefined) {
-            return nav;
-        } else if(ovReplace) {
-            return ovNav;
-        } else {
-            return [...nav, ...ovNav];
-        }
-    }, [nav, ovNav, ovReplace]);
-
-    useEffect(() => {
-        if(noc) {
-            noc.override(nnav, replace);
-            return () => {
-                noc.freeOverride();
-            };
-        }
-    }, [replace, noc, nnav]);
-
-    return [navContext, nnav];
-};
-
-export const NavOverride: FunctionComponent<PropsWithChildren<{
+export type NavOverrideHandle = {
     nav: NavElement[],
     replace?: boolean,
-}>> = ({nav, replace, children}) => {
-    const [ctxData, _] = useNavOverride(nav, !!replace);
-    return (
-        <NavOverideContext.Provider value={ctxData} children={children} />
-    );
+};
+
+const getNavOverride: (data: unknown) => (NavOverrideHandle | undefined) = (data) => {
+    if(!data) return;
+    if(typeof data !== "object") return;
+    if(!("navOverride" in data)) return;
+    // TODO: not totaly type safe
+    return data.navOverride as NavOverrideHandle;
 };
 
 
@@ -132,10 +84,9 @@ const NavElementR: FunctionComponent<{
     return _exhaustiveCheck;
 };
 
-const Nav: FunctionComponent<{
-    nav: NavElement[],
-}> = ({nav}) => {
-    const [ctxData, nnav] = useNavOverride(nav, false);
+const Nav: FunctionComponent = () => {
+    const matches = useMatches();
+    const nav = matches.map(v => v.handle).map(getNavOverride).filter(v => v !== undefined).reduce<NavElement[]>((prev, curr) => curr.replace ? curr.nav : [...prev, ...curr.nav], []);
     const drawerOpenRef = useRef<HTMLInputElement>(null);
 
     const closeDrawer = useCallback(() => {
@@ -183,14 +134,12 @@ const Nav: FunctionComponent<{
 
                         <div className="navbar-end">
                             <ul className="flex">
-                                {nnav.map((elem, idx) => <li key={idx}><NavElementR inDrawer={false} elem={elem} drawerID={"nav-drawer"} /></li>)}
+                                {nav.map((elem, idx) => <li key={idx}><NavElementR inDrawer={false} elem={elem} drawerID={"nav-drawer"} /></li>)}
                             </ul>
                         </div>
                     </header>
                     <main className="flex-grow">
-                        <NavOverideContext.Provider value={ctxData}>
-                            <Outlet />
-                        </NavOverideContext.Provider>
+                        <Outlet />
                     </main>
                     <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
                         <aside>
@@ -213,7 +162,7 @@ const Nav: FunctionComponent<{
                 <div className="drawer-side h-[calc(100vh-4rem)] top-16">
                     <label htmlFor="nav-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
                     <ul className="menu p-4 pt-8 w-80 h-full bg-base-200 text-base-content overflow-scroll flex-nowrap">
-                        {nnav.map((elem, idx) => <li key={idx}><NavElementR inDrawer={true} elem={elem} drawerID={"nav-drawer"} /></li>)}
+                        {nav.map((elem, idx) => <li key={idx}><NavElementR inDrawer={true} elem={elem} drawerID={"nav-drawer"} /></li>)}
                     </ul>
                 </div>
             </div>

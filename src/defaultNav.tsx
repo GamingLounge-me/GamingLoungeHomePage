@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import Nav, { NavElement } from './nav.tsx'
+import Nav, { NavElement, NavOverrideHandle } from './nav.tsx'
 
 const nav: NavElement[] = [
     {
@@ -13,7 +13,11 @@ const nav: NavElement[] = [
     { text: "Rules", link: "/rules", highlight: true },
 ];
 
-const DefNav: FunctionComponent = () => <Nav nav={nav} />
+export const handle = {
+    navOverride: { nav } satisfies NavOverrideHandle,
+};
+
+const DefNav: FunctionComponent = () => <Nav />
 
 export default DefNav;
 

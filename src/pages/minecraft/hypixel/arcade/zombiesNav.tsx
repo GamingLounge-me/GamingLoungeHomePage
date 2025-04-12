@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import { NavElement, NavOverride } from "../../../../nav.tsx";
+import { NavElement, NavOverrideHandle } from "../../../../nav.tsx";
 import { Outlet } from "react-router-dom";
 
 const nav: NavElement[] = [
@@ -11,13 +11,11 @@ const nav: NavElement[] = [
     },
 ];
 
-const ZombiesNav: FunctionComponent = () => {
-    return (
-        <NavOverride nav={nav} replace>
-            <Outlet />
-        </NavOverride>
-    );
+export const handle = {
+    navOverride: { nav, replace: true } satisfies NavOverrideHandle,
 };
+
+const ZombiesNav: FunctionComponent = () => <Outlet />;
 
 export default ZombiesNav;
 

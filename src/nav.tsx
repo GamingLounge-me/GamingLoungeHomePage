@@ -99,16 +99,7 @@ const Nav: FunctionComponent = () => {
             <div className="drawer">
                 <input id="nav-drawer" type="checkbox" className="drawer-toggle" ref={drawerOpenRef} />
                 <div
-                    className="drawer-content
-                        bg-fixed
-                        bg-center
-                        bg-no-repeat
-                        bg-cover
-                        bg-(image:--img-bg-light)
-                        dark:bg-(image:--img-bg-dark)
-                        flex
-                        flex-col
-                        min-h-screen"
+                    className="drawer-content bg-fixed bg-center bg-no-repeat bg-cover bg-(image:--img-bg-light) dark:bg-(image:--img-bg-dark) flex flex-col min-h-screen"
                     style={{
                         '--img-bg-light': `url("${ImgBgLight}")`,
                         '--img-bg-dark': `url("${ImgBgDark}")`,

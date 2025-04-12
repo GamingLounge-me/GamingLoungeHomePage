@@ -75,9 +75,9 @@ const NavElementR: FunctionComponent<{
     const style = (inDrawer ? "text-xl " : navElemVis(elem.navVisability) + "text-lg ") + (highlight ? "btn-primary " : "btn-ghost ") + "btn normal-case";
 
     if("openDrawer" in elem) {
-        return (<label htmlFor={drawerID} className={"drawer-button " + style}>{elem.text}</label>);
+        return (<li><label htmlFor={drawerID} className={"drawer-button " + style}>{elem.text}</label></li>);
     } else if("link" in elem) {
-        return (<Link to={elem.link} className={style}>{elem.text}</Link>);
+        return (<li><Link to={elem.link} className={style}>{elem.text}</Link></li>);
     }
 
     const _exhaustiveCheck: never = elem;
@@ -125,7 +125,7 @@ const Nav: FunctionComponent = () => {
 
                         <div className="navbar-end">
                             <ul className="flex">
-                                {nav.map((elem, idx) => <li key={idx}><NavElementR inDrawer={false} elem={elem} drawerID={"nav-drawer"} /></li>)}
+                                {nav.map((elem, idx) => <NavElementR key={idx} inDrawer={false} elem={elem} drawerID={"nav-drawer"} />)}
                             </ul>
                         </div>
                     </header>
@@ -153,7 +153,7 @@ const Nav: FunctionComponent = () => {
                 <div className="drawer-side h-[calc(100vh-4rem)] top-16">
                     <label htmlFor="nav-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
                     <ul className="menu p-4 pt-8 w-80 h-full bg-base-200 text-base-content overflow-scroll flex-nowrap">
-                        {nav.map((elem, idx) => <li key={idx}><NavElementR inDrawer={true} elem={elem} drawerID={"nav-drawer"} /></li>)}
+                        {nav.map((elem, idx) => <NavElementR key={idx} inDrawer={true} elem={elem} drawerID={"nav-drawer"} />)}
                     </ul>
                 </div>
             </div>

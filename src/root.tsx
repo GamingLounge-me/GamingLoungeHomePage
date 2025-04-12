@@ -10,6 +10,14 @@ export const meta: Route.MetaFunction = () => [
     { title: "GamingLounge" },
 ];
 
+export const links: Route.LinksFunction = () => [
+    {
+        rel: 'icon',
+        href: Icon,
+        type: 'image/png',
+    },
+];
+
 export const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
     return (<html>
         <head>
@@ -18,7 +26,6 @@ export const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
                 name="viewport"
                 content="width=device-width, initial-scale=1.0"
             />
-            <link rel="icon" href={Icon} type="image/png" />
             <Meta />
             <Links />
         </head>

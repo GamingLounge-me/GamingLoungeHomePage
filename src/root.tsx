@@ -3,7 +3,12 @@ import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router-do
 import "./styles.css";
 import Icon from './assets/icon/gaminglounge-64x64.png';
 import { Block, BlockHolder } from "./components/block";
+import { Route } from "./+types/root";
 
+
+export const meta: Route.MetaFunction = () => [
+    { title: "GamingLounge" },
+];
 
 export const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
     return (<html>
@@ -13,8 +18,7 @@ export const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
                 name="viewport"
                 content="width=device-width, initial-scale=1.0"
             />
-            <link rel="icon" href={Icon} />
-            <title>GamingLounge</title>
+            <link rel="icon" href={Icon} type="image/png" />
             <Meta />
             <Links />
         </head>

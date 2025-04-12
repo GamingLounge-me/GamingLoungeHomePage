@@ -1,5 +1,10 @@
 import { FunctionComponent } from "react";
 import { Block, BlockHolder } from "../components/block";
+import { Route } from "./+types/noPage";
+
+export const meta: Route.MetaFunction = () => [
+    { title: "Page not found - GamingLounge" },
+];
 
 const NoPage: FunctionComponent = () => {
     return (

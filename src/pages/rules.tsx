@@ -1,6 +1,7 @@
 import { FunctionComponent } from "react";
 import { Block, BlockHolder } from "../components/block";
 import Link from "../components/link";
+import { Route } from "./+types/rules";
 
 type Rule = {
     id: string,
@@ -44,6 +45,10 @@ const rules: Rules = {
         ],
     },
 };
+
+export const meta: Route.MetaFunction = () => [
+    { title: "Rules - GamingLounge" },
+];
 
 type HiddenLinkProps = {
     href: string,

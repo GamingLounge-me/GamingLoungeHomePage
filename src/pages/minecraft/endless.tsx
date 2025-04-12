@@ -3,6 +3,11 @@ import ImgTelepadCrafting from "../../assets/images/telepad-crafting.png";
 import ImgTelepadGui from "../../assets/images/telepad-gui1.png";
 import ImgTelepadBg from "../../assets/images/telepad.png?url"
 import { Block, BlockHolder } from "../../components/block";
+import { Route } from "./+types/endless";
+
+export const meta: Route.MetaFunction = () => [
+    { title: "Endless - GamingLounge" },
+];
 
 const Endless: FunctionComponent = () => {
     return (

@@ -11,7 +11,7 @@ export default [
         ...prefix("minecraft/hypixel/arcade/zombies", [
             index("./pages/minecraft/hypixel/arcade/zombies.tsx"),
             layout("./pages/minecraft/hypixel/arcade/zombiesNav.tsx", [
-                //route("*", "./pages/noPage.tsx", { id: "minecraft/hypixel/arcade/zombies/404" }),
+                route("*", "./pages/minecraft/hypixel/arcade/zombiesNoPage.tsx"),
                 route("alien_arcadium", "./pages/minecraft/hypixel/arcade/zombies/alien_arcadium.tsx"),
             ]),
         ]),

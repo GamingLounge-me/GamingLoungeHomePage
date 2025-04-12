@@ -107,20 +107,7 @@ const Nav: FunctionComponent = () => {
                     <header className="navbar bg-base-200 sticky top-0 z-40">
                         <div className="navbar-start text-xl normal-case">
                             <Link to="/"><img src={logo} alt="logo" className="w-full h-full" /></Link>
-                            <Link to="/">
-                                <span style={{ color: "#ff0000" }}>G</span>
-                                <span style={{ color: "#ff1100" }}>a</span>
-                                <span style={{ color: "#ff2200" }}>m</span>
-                                <span style={{ color: "#ff3300" }}>i</span>
-                                <span style={{ color: "#ff4400" }}>n</span>
-                                <span style={{ color: "#ff5500" }}>g</span>
-                                <span style={{ color: "#ff6600" }}>L</span>
-                                <span style={{ color: "#ff7700" }}>o</span>
-                                <span style={{ color: "#ff8800" }}>u</span>
-                                <span style={{ color: "#ff9900" }}>n</span>
-                                <span style={{ color: "#ffaa00" }}>g</span>
-                                <span style={{ color: "#ffbb00" }}>e</span>
-                            </Link>
+                            <Link to="/" className="bg-linear-to-r/srgb from-[#f00] to-[#fb0] text-transparent bg-clip-text">GamingLounge</Link>
                         </div>
 
                         <div className="navbar-end">

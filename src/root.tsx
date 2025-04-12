@@ -41,8 +41,8 @@ export const HydrateFallback: FunctionComponent = () => {
     return (
         <BlockHolder>
             <Block title="GamingLounge">
-                <p>The website is currently loading. Please Wait.</p>
-                <p className="text-error">This website requires JavaScript to be enabled to work properly.</p>
+                <p className="noscript:hidden">The website is currently loading. Please Wait.</p>
+                <p className="hidden noscript:block text-error">This website requires JavaScript to be enabled to work properly.</p>
             </Block>
         </BlockHolder>
     );

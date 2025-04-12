@@ -124,18 +124,19 @@ type RuleSetRenderProps = {
 const RuleRenderer: FunctionComponent<RuleRenderProps> = ({rule, data}) => {
     return (
         <li id={data.path}>
+            <p className="text-base">
             {rule.text}
             <HiddenLink href={data.path} />
             {rule.childs && <RuleSetRenderer rules={rule.childs} data={data} />}
+            </p>
         </li>
     );
 };
 
 const listStyle: (data: RuleRenderData) => string = (data) => {
-    switch(data.level) {
-        case 0: return "list-decimal ";
-        case 1: return "list-[lower-alpha] ";
-        case 2: return "list-[lower-roman] ";
+    switch (data.level) {
+        case 2: return "list-[lower-alpha] ";
+        case 3: return "list-[lower-roman] ";
         default: return "list-decimal ";
     };
 };

@@ -19,7 +19,7 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
-    return (<html>
+    return (<html className="scroll-pt-20">
         <head>
             <meta charSet="UTF-8" />
             <meta

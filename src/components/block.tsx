@@ -56,11 +56,11 @@ const baseCardBodyStyle: (image?: string, textColor?: TextColor) => string = (im
 const BaseBlock: FunctionComponent<PropsWithChildren<BlockProps>> = ({ section, position, image, children }) => {
     return (
         <div
+            id={section}
             className={baseCardStyle(image, position)}
                 style={image ? {
                     '--img-bg-card': `url("${image}")`,
                 } as CSSProperties : {}} >
-            <div id={section} className="absolute -top-20" />
             {children}
         </div>
     );

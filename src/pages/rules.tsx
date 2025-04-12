@@ -160,7 +160,23 @@ const RuleSetRenderer: FunctionComponent<RuleSetRenderProps> = ({rules, data}) =
 const RulesPage: FunctionComponent = () => {
     return (
         <BlockHolder>
-            <Block title="Rules">
+            <Block title="Things to Keep in Mind" section="ThingsToKeepInMind">
+                <p className="text-xl">
+                    To learn from our mistakes and do things better this time, these rules exist.
+                    They are not perfect yet and will be supplemented over time.
+                    If there is a rule that is too vague or missing, it is recommended to open a ticket on Discord.
+                </p>
+            </Block>
+
+            <Block title="Scope of Rules" section="ScopeOfRules">
+                <p className="text-xl">
+                    The following rules apply to the entire GamingLounge network.
+                    This includes, among other things, the Discord and Minecraft server and all
+                    other services associated with the GamingLounge.me network.
+                </p>
+            </Block>
+
+            <Block title="Rules" section="Rules">
                 {Object.entries(rules).map(([category, rules], idx) => (
                     <div id={category} key={idx}>
                         <div className="text-3xl">

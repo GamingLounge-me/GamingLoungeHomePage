@@ -19,29 +19,75 @@ type Rules = {
 };
 
 const rules: Rules = {
-    general: {
-        text: "General",
+    GeneralBehavior: {
+        text: "General Behavior",
         rules: [
-            { id: "r1", text: "First Rule" },
+            { id: "1", text: "Players are responsible for their own behavior. General behavioral guidelines apply, such as respectful behavior, no serious insults, no racism, no spam, adherence to channel topics, etc." },
+            { id: "2", text: "It should be obvious, DDoS attacks or other attacks on the server are prohibited and will have consequences." },
+            { id: "3", text: "NSFW content is only allowed in the designated channels." },
+            { id: "4", text: "The use of voice changers or soundboards is not allowed (except Discord's own soundboard)." },
+        ],
+    },
+    Advertisements: {
+        text: "Advertisements",
+        rules: [
+            { id: "1", text: "Advertisements are not allowed (not even via DM). If someone intends to advertise, they can ask the team on Discord for permission." },
+        ],
+    },
+    MinecraftServer: {
+        text: "Minecraft Server",
+        rules: [
             {
-                id: "r2",
-                text: "Second Rule",
+                id: "UnfairAdvantagesOverOthers",
+                text: "Unfair Advantages Over Others",
                 childs: [
+                    { id: "1", text: "Client modifications that allow you to see through walls, such as X-ray or Freecam, are not allowed as they ruin the fun for others." },
+                    { id: "2", text: "Hack clients are generally prohibited, including clients that affect movement, dupe clients, kill aura, and similar." },
+                    { id: "3", text: "Auto-clickers are not prohibited, but the player will be automatically kicked after 16 minutes." },
+                ],
+            },
+            {
+                id: "FarmingAndAFKRules",
+                text: "Farming and AFK Rules",
+                childs: [
+                    { id: "1", text: "All forms of dupers are no longer allowed, including TNT, carpet, string, and sand dupers. This protects resources like wood, cobblestone, and ores from inflation." },
+                    { id: "2", text: "To allow but also limit AFK farming, there is an AFK kick after 16 minutes. It is prohibited to bypass this. Automatic farming while present is perfectly fine and even recommended." },
+                    { id: "3", text: "Unnecessary hoppers and non-stoppable clocks should be avoided. If problems arise, a qualified team member will deactivate the most lagging farms. Placing composters over hoppers should make them more efficient." },
+                ],
+            },
+            {
+                id: "ShopsAndPublicTelepads",
+                text: "Shops & Public Telepads",
+                childs: [
+                    { id: "1", text: "Shops can be built anywhere on claims, but their building or location must look reasonably good. Simply placing a wooden house with two chests in a corner is not desired." },
+                    { id: "2", text: "Telepads may not be used as traps or player farms. With /spawn, every player can escape these traps." },
+                    { id: "3", text: "It is also recommended not to undercut the market, as this only harms the economy. The team reserves the right to give price recommendations or temporarily deactivate outlier shops." },
+                ],
+            },
                     {
-                        id: "r1",
-                        text: "exeption",
+                id: "GriefingAndResourceFarming",
+                text: "Griefing and Resource Farming",
                         childs: [
-                            { id: "r1", text: "with exeptions" },
+                    { id: "1", text: "Griefing players is prohibited. Unclaimed properties are excluded from this, and the team will not reimburse resources." },
+                    { id: "2", text: "Resource farming is prohibited in FreeBuild. Mining ores is okay, but it is recommended to use the respective farming world to leave a clean FreeBuild." },
                         ],
                     },
+            {
+                id: "HandlingLagsAndBugs",
+                text: "Handling Lags and Bugs",
+                childs: [
+                    { id: "1", text: "If problems arise due to lags, the team may reimburse lost resources under video evidence or, in rare cases, logs, provided the explanation is plausible." },
+                    { id: "2", text: "Exploiting bugs is prohibited and will be punished. If bugs lead to item loss, the team may replace items with a plausible explanation." },
                 ],
             },
         ],
     },
-    discord: {
-        text: "Discord",
+    HandlingRuleViolations: {
+        text: "Handling Rule Violations",
         rules: [
-            { id: "r1", text: "Lorem Ipsum" },
+            { id: "1", text: "An incident deemed a violation of the rules by the team may result in a penalty such as a mute or ban. The team reserves the right to decide this. More information is available on Discord." },
+            { id: "2", text: "The team itself may ban a player if they act against the general peace of the server." },
+            { id: "3", text: "The rules are interpreted by the team, not the player. The team's instructions must be followed." },
         ],
     },
 };

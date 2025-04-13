@@ -66,6 +66,18 @@ const Endless: FunctionComponent = () => {
                 </div>
 
             </Block>
+
+            <Block
+                title="Farmworlds"
+                section="farmworlds"
+                position="left"
+            >
+                <h2 className="text-2xl">Farmworlds</h2>
+                <p className="text-lg">The farm worlds are reset at irregular intervals. This depends on the degree of usage of the world and will be announced beforehand.</p>
+
+                <h2 className="text-2xl">Wichtig</h2>
+                <p className="text-lg">Since the farm worlds are reset, you should not build farms or structures there, as they will disappear after the reset.</p>
+            </Block>
         </BlockHolder>
     );
 };

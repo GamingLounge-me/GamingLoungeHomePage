@@ -7,6 +7,7 @@ export default [
         route("rules", "./pages/rules.tsx"),
         route("minecraft/endless", "./pages/minecraft/endless.tsx"),
         route("os/linux/commands", "./pages/os/linux/commands.tsx"),
+        route("os/linux/editor/vim", "./pages/os/linux/editor/vim.tsx"),
         route("hypervisor/proxmox", "./pages/hypervisor/proxmox.tsx"),
         ...prefix("minecraft/hypixel/arcade/zombies", [
             index("./pages/minecraft/hypixel/arcade/zombies.tsx"),

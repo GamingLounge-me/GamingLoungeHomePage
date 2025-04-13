@@ -86,6 +86,11 @@ export const Block: FunctionComponent<PropsWithChildren<BlockProps>> = ({ sectio
 export const TableBlock = <T extends object>(props: BlockProps & TableProps<T>) => {
     return (
         <BaseBlock {...props}>
+            <div className={baseCardBodyStyle(props.image, props.textColor) + " pb-2"}>
+                {props.title && <h2 className={(props.section ? "link link-hover " : "") + "text-3xl"}>
+                    {props.section ? <Link to={{ id: props.section }}>{props.title}</Link> : props.title}
+                </h2>}
+            </div>
             <Table
                 {...props}
                 className={baseCardBodyStyle(props.image, props.textColor)}

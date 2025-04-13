@@ -28,9 +28,9 @@ export const Table = <T extends object,>({ data, render, view, className, ...tab
             </thead>
             <tbody>
                 {data.map((e, idx) => (
-                    <tr key={idx}>
+                    <tr key={idx} className="group">
                         {view.map((v, idx) => (
-                            <td key={idx}>{render[v.collum](e[v.collum])}</td>
+                            <td key={idx} className="group-last:last:rounded-br-(--radius-box) group-last:first:rounded-bl-(--radius-box)">{render[v.collum](e[v.collum])}</td>
                         ))}
                     </tr>
                 ))}

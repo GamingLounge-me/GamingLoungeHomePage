@@ -59,34 +59,17 @@ const Home: FunctionComponent = () => {
             </Block>
 
             <Block
-                    title="Coding"
-                    section="coding"
+                title="Coding & API"
+                section="CodingAPI"
                     image={ImgCoding}
                     position="left"
-                    textColor="light" >
-                {/* TODO: abstaction */}
-                <h3 className="text-xl">Java</h3>
-                <div>
-                    <h4 className="text-lg">API</h4>
-                    <ul className="list-disc pl-4">
-                        <li><Link to={{ghRepo: "GamingLounge-me/ConfigAPI"}} newTab className="link">ConfigAPI</Link></li>
-                        <li><Link to={{ghRepo: "GamingLounge-me/GuiAPI"}} newTab className="link">GuiAPI</Link></li>
-                        <li><Link to={{ghRepo: "GamingLounge-me/PlayerInputAPI"}} newTab className="link">PlayerInputAPI</Link></li>
-                        <li><Link to={{ghRepo: "GamingLounge-me/ItemBuilder"}} newTab className="link">ItemBuilder</Link></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 className="text-lg">Plugins</h4>
-                    <ul className="list-disc pl-4">
-                    </ul>
-                </div>
-                <div>
-                    <h3 className="text-xl">HTML/CSS/JavaScript</h3>
-                    <ul className="list-disc pl-4">
-                        <li><Link to={{ghRepo: "GamingLounge-me/GamingLoungeHomePage"}} newTab className="link">This Website</Link></li>
-                    </ul>
-                </div>
-
+                textColor="light"
+            >
+                <h2 className="text-2xl">Coding</h2>
+                {/* content */}
+                <div className='mb-4' />
+                <h2 className="text-2xl">API</h2>
+                {/* content */}
             </Block>
         </BlockHolder>
     )

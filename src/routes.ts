@@ -5,6 +5,7 @@ export default [
         route("*", "./pages/noPage.tsx"),
         index("./pages/home.tsx"),
         route("rules", "./pages/rules.tsx"),
+        route("changelog", "./pages/Changelog.tsx"),
         route("minecraft/endless", "./pages/minecraft/endless.tsx"),
         route("os/linux/commands", "./pages/os/linux/commands.tsx"),
         route("os/linux/editor/vim", "./pages/os/linux/editor/vim.tsx"),
@@ -18,4 +19,3 @@ export default [
         ]),
     ]),
 ] satisfies RouteConfig;
-

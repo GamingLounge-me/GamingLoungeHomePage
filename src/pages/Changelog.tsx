@@ -93,7 +93,7 @@ const RenderTypes: FunctionComponent<any> = ({ log }) => {
         case "remove":
             return (
                 <>
-                    <span className="text-red-600">[<span className="pl-0.5 pr-0.5">-</span>]</span>
+                    <span className="text-red-600">[<span className="px-0.5">-</span>]</span>
                     &nbsp;
                     {log.text}
                 </>
@@ -109,7 +109,7 @@ const RenderTypes: FunctionComponent<any> = ({ log }) => {
         default:
             return (
                 <>
-                    <span>[<span className="pl-0.5 pr-0.5">?</span>]</span>
+                    <span>[<span className="px-0.5">?</span>]</span>
                     &nbsp;
                     {log.text}
                 </>

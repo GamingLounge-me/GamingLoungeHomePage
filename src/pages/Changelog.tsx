@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, ReactNode } from "react";
 import { Block, BlockHolder } from "../components/block";
 import Link from "../components/link";
 import { Route } from "./+types/Changelog";
@@ -80,53 +80,47 @@ type LogSetRenderProps = {
     data: LogRenderData,
 };
 
-const RenderTypes: FunctionComponent<any> = ({ log }) => {
-    switch (log.type) {
-        case "add":
-            return (
-                <>
-                    <span className="text-green-600">[+]</span>
-                    &nbsp;
-                    {log.text}
-                </>
-            );
-        case "remove":
-            return (
-                <>
-                    <span className="text-red-600">[<span className="px-0.5">-</span>]</span>
-                    &nbsp;
-                    {log.text}
-                </>
-            );
-        case "change":
-            return (
-                <>
-                    <span className="text-yellow-600">[~]</span>
-                    &nbsp;
-                    {log.text}
-                </>
-            );
-        default:
-            return (
-                <>
-                    <span>[<span className="px-0.5">?</span>]</span>
-                    &nbsp;
-                    {log.text}
-                </>
-            );
-    }
+type logBase = {
+    log: Log,
+    data: LogRenderData,
+    prefix: ReactNode,
 }
 
-const LogRenderer: FunctionComponent<LogRenderProps> = ({ log, data }) => {
+const LogBase: FunctionComponent<logBase> = ({ log, data, prefix }) => {
     return (
         <li id={data.path}>
             <p className="text-base">
-                <RenderTypes log={log} />
-                <HiddenLink href={data.path} />
-                {log.childs && <LogSetRenderer logs={log.childs} data={data} />}
+                <span className="flex">
+                    [<span className={"min-w-3 text-center "}>{prefix}</span>]
+                    &nbsp;
+                    {log.text}
+                    <HiddenLink href={data.path} />
+                    {log.childs && <LogSetRenderer logs={log.childs} data={data} />}
+                </span>
             </p>
         </li>
-    );
+    )
+}
+
+const LogRenderer: FunctionComponent<LogRenderProps> = ({ log, data }) => {
+    switch (log.type) {
+        case "add":
+            return (
+                <LogBase log={log} data={data} prefix={<span className={"text-success"}>+</span>} />
+            );
+        case "remove":
+            return (
+                <LogBase log={log} data={data} prefix={<span className={"text-error"}>-</span>} />
+            );
+        case "change":
+            return (
+                <LogBase log={log} data={data} prefix={<span className={"text-warning"}>~</span>} />
+            );
+        default:
+            return (
+                <LogBase log={log} data={data} prefix={<span className={"text-info"}>?</span>} />
+            );
+    }
 };
 
 const nextLevel: (data: LogRenderData, childId: string) => LogRenderData = (data, childId) => {

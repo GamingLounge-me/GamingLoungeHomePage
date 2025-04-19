@@ -164,6 +164,7 @@ const ChangeLogPage: FunctionComponent = () => {
                     <div id={date} key={idx}>
                         <div className="text-3xl">
                             {date}
+                            {logs.note == undefined ? <></> : <>: {logs.note}</>}
                             <HiddenLink href={date} />
                         </div>
                         <LogSetRenderer logs={logs.logs} data={{

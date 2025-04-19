@@ -35,7 +35,7 @@ const getPositionStyle: (position?: Position) => string = (position) => {
 
 export const BlockHolder: FunctionComponent<PropsWithChildren> = ({children}) => {
     return (
-        <div className="py-20 grid grid-cols-1 gap-y-10 md:px-10">
+        <div className="py-27.5 grid grid-cols-1 gap-y-10 md:px-10">
             {children}
         </div>
     );

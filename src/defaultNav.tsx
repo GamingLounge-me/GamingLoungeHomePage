@@ -10,6 +10,7 @@ const nav: NavElement[] = [
         highlight: true,
     },
     { text: "Home", link: "/" },
+    { text: "Changelog", link: "/changelog" },
     { text: "Rules", link: "/rules", highlight: true },
 ];
 

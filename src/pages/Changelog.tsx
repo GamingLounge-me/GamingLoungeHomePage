@@ -156,14 +156,6 @@ const ChangeLogPage: FunctionComponent = () => {
     return (
         <BlockHolder>
             <Block title="Changelog" section="changelog">
-                <p className={"italic text-accent text-lg"}>DD.MM.YYYY</p>
-                <ul className="mb-4">
-                    <li><span className="text-green-600">[+]</span> -&gt; Add</li>
-                    <li><span className="text-red-600">[<span className="pl-0.5 pr-0.5">-</span>]</span> -&gt; Remove</li>
-                    <li><span className="text-yellow-600">[~]</span> -&gt; Change</li>
-                    <li><span>[<span className="pl-0.5 pr-0.5">?</span>]</span> -&gt; Other</li>
-                </ul>
-
                 {Object.entries(changeLog).sort(([dateA], [dateB]) => {
                     const [dayA, monthA, yearA] = dateA.split('.').map(Number);
                     const [dayB, monthB, yearB] = dateB.split('.').map(Number);

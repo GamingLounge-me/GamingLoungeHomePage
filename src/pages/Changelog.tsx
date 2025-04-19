@@ -34,7 +34,12 @@ const changeLog: ChangeLog = {
     "16.04.2025": {
         note: "Test",
         logs: [
-            { id: "1", type: "add", text: "1" },
+            {
+                id: "1", type: "add", text: "bla",
+                childs: [
+                    { id: "1", text: "bli" },
+                ]
+            },
             { id: "2", type: "remove", text: "2" },
             { id: "3", type: "add", text: "3" },
             { id: "4", type: "change", text: "4" },
@@ -44,9 +49,15 @@ const changeLog: ChangeLog = {
         note: "Test",
         logs: [
             { id: "1", type: "add", text: "1" },
-            { id: "2", text: "2" },
+            { id: "2", type: "change", text: "2" },
             { id: "3", type: "add", text: "3" },
             { id: "4", type: "change", text: "4" },
+            { id: "5", text: "5" },
+            { id: "6", type: "change", text: "6" },
+            { id: "7", type: "add", text: "7" },
+            { id: "8", type: "change", text: "8" },
+            { id: "9", type: "remove", text: "9" },
+            { id: "10", type: "change", text: "10" },
         ],
     },
 };
@@ -91,12 +102,12 @@ const LogBase: FunctionComponent<logBase> = ({ log, data, prefix }) => {
         <li id={data.path}>
             <p className="text-base">
                 <span className="flex">
-                    [<span className={"min-w-3 text-center "}>{prefix}</span>]
+                    {log.type == undefined ? <></> : <>[<span className={"min-w-3 text-center "}>{prefix}</span>]</>}
                     &nbsp;
                     {log.text}
                     <HiddenLink href={data.path} />
-                    {log.childs && <LogSetRenderer logs={log.childs} data={data} />}
                 </span>
+                {log.childs && <LogSetRenderer logs={log.childs} data={data} />}
             </p>
         </li>
     )
@@ -118,7 +129,7 @@ const LogRenderer: FunctionComponent<LogRenderProps> = ({ log, data }) => {
             );
         default:
             return (
-                <LogBase log={log} data={data} prefix={<span className={"text-info"}>?</span>} />
+                <LogBase log={log} data={data} prefix={<></>} />
             );
     }
 };
@@ -132,7 +143,7 @@ const nextLevel: (data: LogRenderData, childId: string) => LogRenderData = (data
 
 const LogSetRenderer: FunctionComponent<LogSetRenderProps> = ({ logs, data }) => {
     return (
-        <ol className={"pl-4"}>
+        <ol className={"pl-6"}>
             {logs.map((logs, idx) => (
                 <LogRenderer log={logs} data={nextLevel(data, logs.id)} key={idx} />
             ))}

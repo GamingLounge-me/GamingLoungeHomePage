@@ -1,4 +1,4 @@
-import { Block, BlockHolder, TableBlock } from "../../../../components/block"
+import { BlockHolder, TableBlock } from "../../../../components/block"
 
 const Insert = [
     { command: "i", description: "Insert mode (insert text before the cursor)" },

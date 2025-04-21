@@ -70,7 +70,10 @@ const Link: FunctionComponent<PropsWithChildren<{
     const closeDrawer = useDrawerClose();
     const { newTab: _, ...cProps } = props;
     return (
-        <RRLink {...cProps} to={toPath(props.to)} target={props.newTab ? "_blank" : ""} onClick={() => closeDrawer?.()} />
+        <RRLink {...cProps} to={toPath(props.to)} target={props.newTab ? "_blank" : ""} onClick={e => {
+            closeDrawer?.();
+            props.onClick?.(e);
+        }} />
     );
 };
 

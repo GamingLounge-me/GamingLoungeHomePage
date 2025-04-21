@@ -23,7 +23,6 @@ type ChangeLog = {
 
 const changeLog: ChangeLog = {
     "16.03.2025": {
-        note: "Test",
         logs: [
             {
                 id: "1",

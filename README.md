@@ -1,4 +1,4 @@
-# GamingLoungeHomePaage
+# GamingLoungeHomePage
 
 Build with:
 - [Vite](https://vite.dev/)

@@ -98,11 +98,18 @@ export const meta: Route.MetaFunction = () => [
 
 type HiddenLinkProps = {
     href: string,
+    copy?: string,
 };
 
-const HiddenLink: FunctionComponent<HiddenLinkProps> = ({ href }) => {
+function copyText(text?: string) {
+    if (text === undefined) return;
+    const encodedText = text.replace(/ /g, "%20");
+    navigator.clipboard.writeText(encodedText);
+}
+
+const HiddenLink: FunctionComponent<HiddenLinkProps> = ({ href, copy }) => {
     return (
-        <Link to={{ id: href }} className="text-transparent link link-hover link-primary">#</Link>
+        <Link to={{ id: href }} className="text-transparent link link-hover link-primary" onClick={() => copyText(copy)}>#</Link>
     );
 };
 
@@ -126,7 +133,7 @@ const RuleRenderer: FunctionComponent<RuleRenderProps> = ({rule, data}) => {
         <li id={data.path}>
             <p className="text-base">
             {rule.text}
-            <HiddenLink href={data.path} />
+            <HiddenLink href={data.path} copy={window.location.href + "#:~:text=" + rule.text} />
             {rule.childs && <RuleSetRenderer rules={rule.childs} data={data} />}
             </p>
         </li>
@@ -181,7 +188,7 @@ const RulesPage: FunctionComponent = () => {
                     <div id={category} key={idx}>
                         <div className="text-3xl">
                             {rules.text}
-                            <HiddenLink href={category} />
+                            <HiddenLink href={category} copy={window.location.href + "#:~:text=" + rules.text}/>
                         </div>
                         <RuleSetRenderer rules={rules.rules} data={{
                             level: 0,

@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect, useState } from "react";
 import { Block, BlockHolder } from "../components/block";
 import Link from "../components/link";
 import { Route } from "./+types/rules";
@@ -129,11 +129,17 @@ type RuleSetRenderProps = {
 };
 
 const RuleRenderer: FunctionComponent<RuleRenderProps> = ({rule, data}) => {
+    const [location, setLocation] = useState("");
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            setLocation(window.location.href);
+        }
+    }, []);
     return (
         <li id={data.path}>
             <p className="text-base">
             {rule.text}
-            <HiddenLink href={data.path} copy={window.location.href + "#:~:text=" + rule.text} />
+            <HiddenLink href={data.path} copy={location + "#:~:text=" + rule.text} /> 
             {rule.childs && <RuleSetRenderer rules={rule.childs} data={data} />}
             </p>
         </li>
@@ -165,6 +171,12 @@ const RuleSetRenderer: FunctionComponent<RuleSetRenderProps> = ({rules, data}) =
 
 
 const RulesPage: FunctionComponent = () => {
+    const [location, setLocation] = useState("");
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            setLocation(window.location.href);
+        }
+    }, []);
     return (
         <BlockHolder>
             <Block title="Things to Keep in Mind" section="ThingsToKeepInMind">
@@ -188,12 +200,14 @@ const RulesPage: FunctionComponent = () => {
                     <div id={category} key={idx}>
                         <div className="text-3xl">
                             {rules.text}
-                            <HiddenLink href={category} copy={window.location.href + "#:~:text=" + rules.text}/>
+                            <HiddenLink href={category} copy={location + "#:~:text=" + rules.text}/>
                         </div>
                         <RuleSetRenderer rules={rules.rules} data={{
                             level: 0,
                             path: category,
-                        }} />
+                        }}
+                        
+                        />
                     </div>
                 ))}
             </Block>
